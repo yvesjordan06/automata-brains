@@ -1,9 +1,9 @@
 # automata-brains
 TP INFO 304 - Les Automata
 
-#Automate
+# Automate
 
-###Definition
+### Definition
 ```
 class Automate:
    # Attribut
@@ -14,8 +14,8 @@ class Automate:
     etat_finaux
     transitions
 ```
-###Initialisation
->1 - Il doit etre possible d'initialiser l'automate avec les valeurs
+### Initialisation
+> 1 - Il doit etre possible d'initialiser l'automate avec les valeurs
 NB Le nom ne doit pas initialiser
 
 Example
@@ -39,8 +39,8 @@ automata = Automate(alphabet, [a,b,c], a, [b], [t1,t2])
 #5 = Transitions
 
 ```
-###Initialisation
->2 - Il doit etre possible d'ajouter des etat, transition a l'alphabet
+### Initialisation
+> 2 - Il doit etre possible d'ajouter des etat, transition a l'alphabet
 
 Declaration `ajouter_etat(etat, est_initial = False, est_final = False)`
 
@@ -64,7 +64,7 @@ automate.ajouter_etat(Etat('d'),False,False) ou automate.ajouter_etat(Etat('d'))
 
 Declaration `definir_etat_initial(etat)`
 
->NB Si l'etat n'existe pas dans l'automate `raise`, Si l'etat est deja initial, Ne rien faire sinon faire que l'etat devien  initial
+> NB Si l'etat n'existe pas dans l'automate `raise`, Si l'etat est deja initial, Ne rien faire sinon faire que l'etat devien  initial
 Si un etat initial existe, Le remplacer par le nouveau
 
 
