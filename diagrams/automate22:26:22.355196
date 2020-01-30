@@ -1,0 +1,24 @@
+digraph Test {
+	rankdir=LR size="15,5"
+	node [height=0 shape=none width=0]
+	""
+	node [shape=doublecircle]
+	c
+	node [shape=circle]
+	"" -> a
+	b -> PUIS [label=3]
+	b -> PUIS [label=1]
+	a -> a [label=1]
+	a -> PUIS [label=3]
+	b -> c [label=""]
+	c -> PUIS [label=3]
+	c -> PUIS [label=2]
+	PUIS -> PUIS [label=3]
+	PUIS -> PUIS [label=2]
+	a -> PUIS [label=2]
+	PUIS -> PUIS [label=1]
+	b -> PUIS [label=2]
+	a -> c [label=""]
+	a -> b [label=1]
+	c -> PUIS [label=1]
+}
