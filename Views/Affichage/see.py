@@ -10,7 +10,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from Models.Automate import Automate
-from Views.Affichage.makeView import SeeEtatWindow, SeeTransitionWindow, SeeAlphabetWindow, ReconnaissanceWindow
+from Views.Affichage.makeView import SeeEtatWindow, SeeAlphabetWindow, ReconnaissanceWindow, \
+     SeeCentralWindow
 
 
 class Ui_Form(object):
@@ -19,6 +20,10 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(470, 368)
+
+
+
+
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
         self.groupBox = QtWidgets.QGroupBox(Form)
@@ -26,7 +31,7 @@ class Ui_Form(object):
         self.groupBox.setObjectName("groupBox")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.transition = SeeTransitionWindow(self.automate)
+        self.transition = SeeCentralWindow(self.automate)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(1)
@@ -35,6 +40,7 @@ class Ui_Form(object):
 
         self.transition.setObjectName("transition")
         self.verticalLayout_2.addWidget(self.transition)
+
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.alphabet = SeeAlphabetWindow(self.automate)
@@ -64,12 +70,24 @@ class Ui_Form(object):
 
         self.automate.automate_modifier.connect(self.set_state)
 
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.groupBox.setTitle(_translate("Form", f"{self.automate.nom} ({self.automate.type} {'complet' if self.automate.est_complet else 'incomplet'})"))
     def set_state(self):
         self.groupBox.setTitle(f"{self.automate.nom} ({self.automate.type} {'complet' if self.automate.est_complet else 'incomplet'})")
+
+    def switch_transition(self):
+
+
+
+        self.verticalLayout_2.addWidget(self.transition)
+
+    def switch_reconnaissance(self):
+
+
+        self.verticalLayout_2.replaceWidget(self.transition,self.reconnaissance)
 
 
 if __name__ == "__main__":

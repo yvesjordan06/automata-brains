@@ -17,6 +17,8 @@ class Automate(QObject):
 #class Automate:
     # Signale de modification
     automate_modifier = pyqtSignal()
+    reconnaissance = pyqtSignal(str)
+    image = pyqtSignal(str)
 
     def __init__(self, alphabet, etats, etat_initial, etat_finaux, transition):
         super().__init__()
@@ -348,6 +350,9 @@ class Automate(QObject):
                 return False
         except:
             return False
+
+    def reconnais_text(self, text:str)->str:
+        return f"Requete: \n \n{text} \n\n\n Resultat: \n \n{text} resultat"
 
     """
     Cette fonction determinise l'automate actuelle

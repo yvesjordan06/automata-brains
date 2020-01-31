@@ -8,6 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon
 
 from Models.Automate import Automate
 
@@ -21,25 +22,13 @@ class Ui_Form(object):
         Form.resize(369, 279)
         self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.groupBox = QtWidgets.QGroupBox(Form)
-        self.groupBox.setObjectName("groupBox")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.groupBox)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.label = QtWidgets.QLabel(self.groupBox)
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.verticalLayout.addWidget(self.label)
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label_2 = QtWidgets.QLabel(self.groupBox)
-        self.label_2.setObjectName("label_2")
-        self.horizontalLayout_2.addWidget(self.label_2)
-        self.tableWidget = QtWidgets.QTableWidget(self.groupBox)
+
+
+
+        self.tableWidget = QtWidgets.QTableWidget()
         self.tableWidget.setObjectName("tableWidget")
 
-        self.horizontalLayout_2.addWidget(self.tableWidget)
-        self.verticalLayout.addLayout(self.horizontalLayout_2)
-        self.horizontalLayout.addWidget(self.groupBox)
+        self.horizontalLayout.addWidget(self.tableWidget)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -52,9 +41,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.groupBox.setTitle(_translate("Form", "Transition"))
-        self.label.setText(_translate("Form", "Alphabet"))
-        self.label_2.setText(_translate("Form", "Etats"))
+        #self.groupBox.setTitle(_translate("Form", "Transition"))
+
 
         __sortingEnabled = self.tableWidget.isSortingEnabled()
         self.tableWidget.setSortingEnabled(False)
@@ -64,11 +52,31 @@ class Ui_Form(object):
     def action_set_state(self):
         self.tableWidget.clear()
         etat_list = list(self.automate.etats)
-        etats = [f"{'->' if etat == self.automate.etat_initial else ''}{etat}{'->' if etat in self.automate.etats_finaux else ''}" for etat in etat_list]
         alphabet = [symbole for symbole in self.automate.alphabet.list]
         self.tableWidget.setColumnCount(len(self.automate.alphabet.list))
         self.tableWidget.setRowCount(len(self.automate.etats))
-        self.tableWidget.setVerticalHeaderLabels(etats)
+        row = 0
+        for etat in etat_list :
+            label = str(etat)
+            item = QtWidgets.QTableWidgetItem(label)
+            initial = False
+            final = False
+            if etat == self.automate.etat_initial:
+                initial = True
+            if etat in self.automate.etats_finaux:
+                final = True
+            if initial:
+                item = QtWidgets.QTableWidgetItem(QIcon("icons/initial.png"), label)
+            if final:
+                item = QtWidgets.QTableWidgetItem(QIcon("icons/final.png"), label)
+            if initial and final:
+                item = QtWidgets.QTableWidgetItem(QIcon("icons/icon.png"), label)
+
+            self.tableWidget.setVerticalHeaderItem(row, item)
+            row += 1
+
+
+
         self.tableWidget.setHorizontalHeaderLabels(alphabet)
 
         for t in self.automate.transitions:

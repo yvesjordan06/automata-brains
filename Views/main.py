@@ -253,6 +253,9 @@ class Ui_MainWindow(object):
         self.unionToolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.unionToolButton.setObjectName("unionToolButton")
         self.horizontalLayout_3.addWidget(self.unionToolButton)
+
+
+
         self.infoToolButton = QtWidgets.QToolButton(self.frame)
         self.infoToolButton.setToolTipDuration(5)
         icon7 = QtGui.QIcon()
@@ -353,7 +356,7 @@ class Ui_MainWindow(object):
 
         # Binding
         self.actionVoir.triggered.connect(self.automate.visualiser)
-        self.viewToolButton.clicked.connect(self.automate.visualiser)
+        self.viewToolButton.clicked.connect(lambda:self.visualiser())
         self.minimizeToolButton.clicked.connect(self.minimizer)
         self.completeToolButton.clicked.connect(lambda: self.automate.copie_automate(self.automate.completer()))
         self.determineToolButton.clicked.connect(lambda: self.automate.copie_automate(self.automate.determiniser()))
@@ -361,6 +364,8 @@ class Ui_MainWindow(object):
         self.openToolButton.clicked.connect(lambda: self.showDialog())
         self.unionToolButton.clicked.connect(lambda: self.showUnionDialog())
 
+    def visualiser(self):
+        self.automate.image.emit(self.automate.visualiser())
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         self.window = MainWindow
@@ -386,6 +391,9 @@ class Ui_MainWindow(object):
         self.unionToolButton.setToolTip(_translate("MainWindow", "Union"))
         self.unionToolButton.setStatusTip(_translate("MainWindow", "Fusionner 2 automates"))
         self.unionToolButton.setText(_translate("MainWindow", "Union"))
+
+
+
         self.infoToolButton.setToolTip(_translate("MainWindow", "Infos"))
         self.infoToolButton.setStatusTip(_translate("MainWindow", "Affiche les infos a propos de l\'automate"))
         self.infoToolButton.setText(_translate("MainWindow", "Infos"))
@@ -407,6 +415,8 @@ class Ui_MainWindow(object):
         self.actionAide.setText(_translate("MainWindow", "Aide"))
         self.actionLien_Utiles.setText(_translate("MainWindow", "Lien Utiles"))
 
+
+
     def minimizer(self):
         self.automate.copie_automate(self.automate.determiniser())
 
@@ -418,7 +428,10 @@ class Ui_MainWindow(object):
 
             with f:
                 data = f.read()
-                print(' '.join(data.split('\n')))
+                text = ' '.join(data.split('\n'))
+                result = self.automate.reconnais_text(text)
+                self.automate.reconnaissance.emit(result)
+
     def showUnionDialog(self):
         if not self.liste_automate or len(self.liste_automate < 2):
             self.window.setStatusTip('Aucun automate')

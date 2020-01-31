@@ -4,20 +4,27 @@ from Models.Automate import Automate
 from Views.Affichage.nomView import Ui_GroupBox as NomUI
 from Views.Affichage.etatView import Ui_Form as EtatUI
 from Views.Affichage.alphabetView import Ui_Form as AlphabetUI
-from Views.Affichage.transitionView import Ui_Form as TransitionUI
+
 from Views.Affichage.reconnaissance import Ui_Form as ReconnaissanceUI
+
+from Views.Affichage.central import Ui_TabWidget as CentralUi
 from Views.Affichage.typeView import Ui_GroupBox as TypeUI
 
 
-class SeeTransitionWindow(QtWidgets.QWidget):
+
+
+class SeeCentralWindow(QtWidgets.QTabWidget):
 
 
     def __init__(self, automate: Automate):
-        super(SeeTransitionWindow, self).__init__()
+        super(SeeCentralWindow, self).__init__()
 
-        self.ui = TransitionUI(automate)
+        self.ui = CentralUi(automate)
 
         self.ui.setupUi(self)
+
+
+
 
 class SeeEtatWindow(QtWidgets.QWidget):
 
