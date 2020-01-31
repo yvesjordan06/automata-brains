@@ -21,7 +21,7 @@ class QImageViewer(QWidget):
         self.lay = QVBoxLayout()
         self.lay.addWidget(self.image)
         self.setLayout(self.lay)
-        #self.open()
+        self.open()
     def open(self):
         path = self.test.enregistrer_image(f"{hash(self.test)}{self.test.nom}")
         print(path)

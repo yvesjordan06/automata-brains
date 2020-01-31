@@ -222,11 +222,10 @@ class Automate(QObject):
     """
     def complementation_automate(self):
         new_transition = set()
-        self.__etat_finaux.clear()
-        self.__etat_finaux.add(self.__etat_initial)
+
         for i in self.__transitions:
             new_transition.add(Transition(i.arrive, i.symbole, i.depart))
-        return Automate(self.__alphabet, self.__etats, self.__etat_initial, new_transition)
+        return Automate(self.__alphabet, self.__etats, self.__etat_initial, [self.etat_initial], new_transition)
 
     """
     Intersection
@@ -278,7 +277,7 @@ class Automate(QObject):
         # Si vous avez installer graphviz decommentez
 
 
-        f = Digraph('Test', filename=f'../diagrams/{filename}', format='svg')
+        f = Digraph('Test', filename=f'../diagrams/{filename}', format='png')
         # f.attr(label=f'Type: \n {self.check_type()}')
         f.attr(rankdir='LR', size='15,5')
         f.attr('node', shape='none', height='0', width='0')
@@ -290,7 +289,7 @@ class Automate(QObject):
         f.edge('', str(self.etat_initial))
         for t in self.transitions:
             f.edge(str(t.depart), str(t.arrive), label=t.symbole)
-        return f.view(cleanup=True)
+        return f.render(view=False, format='png')
 
     """
     Permet de visualiser l'image sans la stocker dans la memoire
@@ -706,7 +705,7 @@ if __name__ == '__main__':
     automate.definir_nom('hiro')
     print(automate.nom)
     automate.visualiser()
-    automate.minimiser().visualiser()
+    automate.complementation_automate().visualiser()
     #automate2.visualiser()
     #automate.union_automate(automate).visualiser()
     #automate.union_automate(automate).determiniser().visualiser()
