@@ -76,8 +76,8 @@ class Ui_Form(object):
         etat = Etat(valeur)
 
         # Ajout de l'etat
-        # TODO Envoyer un etat ici quand l'erreur sera reparer
-        self.automate.ajouter_etats(valeur)
+
+        self.automate.ajouter_etats(etat)
 
         # Ajout de l'etat initial
         if self.checkBoxInitial.isChecked():

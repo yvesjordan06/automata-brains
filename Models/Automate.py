@@ -1,9 +1,9 @@
-#from PyQt5.QtCore import QObject, pyqtSignal
+from PyQt5.QtCore import QObject, pyqtSignal
 
 from Models.Transition import Transition
 from Models.Etat import Etat
 from Models.Alphabet import Alphabet
-#from graphviz import Digraph
+from graphviz import Digraph
 import datetime
 
 
@@ -13,10 +13,10 @@ class Type:
     eAFN = f'Epsilon {AFN}'
 
 
-#class Automate(QObject):
-class Automate:
+class Automate(QObject):
+#class Automate:
     # Signale de modification
-    #automate_modifier = pyqtSignal()
+    automate_modifier = pyqtSignal()
 
     def __init__(self, alphabet, etats, etat_initial, etat_finaux, transition):
         super().__init__()
@@ -49,6 +49,8 @@ class Automate:
                 return initial
             else:
                 raise ValueError(initial, "ne se trouve pas dans self.__etats")
+        elif initial is None:
+            self.__etat_initial = None
         else:
             raise TypeError("le type non prix en charge")
 
@@ -95,7 +97,7 @@ class Automate:
         print(f"J'ajoute le symbole {symbole}")
         self.__alphabet.ajouter_symbole(symbole)
         print(self.alphabet)
-        #self.automate_modifier.emit()
+        self.automate_modifier.emit()
 
     """
              Cette fonction ajoute simplement un etat dans l'automate de type Etat
@@ -105,7 +107,7 @@ class Automate:
         if isinstance(etat, Etat):
             self.__etats.add(etat)
             print(f"Etat Ajouter {etat}")
-            #self.automate_modifier.emit()
+            self.automate_modifier.emit()
         else:
             raise TypeError("type non prit en charge")
 
@@ -118,7 +120,8 @@ class Automate:
             if etat in self.__etats:
                 self.__etat_initial = etat
                 print(f"Etat Initial {etat}")
-                #self.automate_modifier.emit()
+                self.automate_modifier.emit()
+
             else:
                 raise ValueError("valeur non presente")
         else:
@@ -133,7 +136,7 @@ class Automate:
             if etat in self.__etats:
                 self.__etat_finaux.add(etat)
                 print(f"Etat Final {etat}")
-                #self.automate_modifier.emit()
+                self.automate_modifier.emit()
             else:
                 raise ValueError("valeur non presente")
         else:
@@ -149,7 +152,7 @@ class Automate:
                 if (transition.symbole in self.__alphabet) or transition.symbole in ('', "€"):
                     self.__transitions.add(transition)
                     print(f'Transtion Ajouter {transition}')
-                    #self.automate_modifier.emit()
+                    self.automate_modifier.emit()
                 else:
                     raise ValueError("symbole de la transtion non defini")
             else:
@@ -168,6 +171,7 @@ class Automate:
                     corbeille.append(i)
             for j in corbeille:
                 self.__transitions.remove(j)
+            self.automate_modifier.emit()
 
         else:
             raise TypeError("type non prit en charge")
@@ -186,6 +190,7 @@ class Automate:
                 corbielle.append(i)
             for j in corbielle:
                 self.__transitions.remove(j)
+            self.automate_modifier.emit()
 
     """
     Cette fonction se charge de supprimer un etat de l'automate
@@ -206,6 +211,7 @@ class Automate:
                     corbeille.append(i)
             for j in corbeille:
                 self.__transitions.remove(j)
+            self.automate_modifier.emit()
 
     """
     Complementation
@@ -246,7 +252,7 @@ class Automate:
     def visualiser(self, **kwargs):
         # Si vous avez installer graphviz decommentez
 
-        """kwargs.setdefault('filename', f'../diagrams/automate{datetime.datetime.now().time()}')
+        kwargs.setdefault('filename', f'../diagrams/automate{datetime.datetime.now().time()}')
         kwargs.setdefault('format', f'png')
 
         f = Digraph('Test', filename=kwargs['filename'], format=kwargs['format'])
@@ -261,7 +267,7 @@ class Automate:
         f.edge('', str(self.etat_initial))
         for t in self.transitions:
             f.edge(str(t.depart), str(t.arrive), label=t.symbole)
-        return f.view()"""
+        return f.view()
 
         pass
     """
@@ -465,10 +471,11 @@ class Automate:
         if isinstance(autre, Automate):
             self.__alphabet = autre.alphabet
             self.__etats = autre.etats
-            self.__etat_initial = Automate.etat_initial
-            self.__etat_finaux = autre.etat_finaux
-            self.__transitions = autre.transition
+            self.__etat_initial = autre.etat_initial
+            self.__etat_finaux = autre.etats_finaux
+            self.__transitions = autre.transitions
             self.nom = autre.nom
+            self.automate_modifier.emit()
         else:
             raise TypeError('Type Automate attendu ')
 

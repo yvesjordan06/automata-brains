@@ -62,10 +62,14 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.automate.automate_modifier.connect(self.set_state)
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.groupBox.setTitle(_translate("Form", f"{self.automate.nom} (Non Determinist)"))
+        self.groupBox.setTitle(_translate("Form", f"{self.automate.nom} ({self.automate.type} {'complet' if self.automate.est_complet else 'incomplet'})"))
+    def set_state(self):
+        self.groupBox.setTitle(f"{self.automate.nom} ({self.automate.type} {'complet' if self.automate.est_complet else 'incomplet'})")
 
 
 if __name__ == "__main__":

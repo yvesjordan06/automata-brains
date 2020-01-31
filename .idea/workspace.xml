@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="" />
+    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Automate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Automate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Etat.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Etat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Affichage/see.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/see.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Creation/etatUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Creation/etatUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +24,7 @@
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Etat_test_EtatTestCase.coverage" NAME="Unittests for Etat_test.EtatTestCase Coverage Results" MODIFIED="1580300224144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Transition_test_AlphabetTestCase_test_epsilon.coverage" NAME="Unittests for Transition_test.AlphabetTestCase.test_epsilon Coverage Results" MODIFIED="1580300940294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$creation.coverage" NAME="creation Coverage Results" MODIFIED="1580332965011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
+    <SUITE FILE_PATH="coverage/automata_brains$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580426643107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
     <SUITE FILE_PATH="coverage/automata_brain$main.coverage" NAME="main Coverage Results" MODIFIED="1580256504788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brain$ui_transition.coverage" NAME="ui-transition Coverage Results" MODIFIED="1580163182308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brain$alphabetView.coverage" NAME="alphabetView Coverage Results" MODIFIED="1580206875337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
@@ -32,13 +41,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Automate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="80" column="18" lean-forward="true" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="93">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
               <folding>
-                <element signature="e#47#87#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Creation/etatUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+              <folding>
+                <element signature="e#197#239#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Affichage/see.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="71" column="135" selection-start-line="71" selection-start-column="135" selection-end-line="71" selection-end-column="135" />
+              <folding>
+                <element signature="e#196#238#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="349" column="80" selection-start-line="349" selection-start-column="80" selection-end-line="349" selection-end-column="80" />
+              <folding>
+                <element signature="e#197#239#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Alphabet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="450">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -56,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Transition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-185">
-              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -65,8 +110,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Etat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            <state relative-caret-position="191">
+              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-450">
+                <caret column="1" selection-start-column="1" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -84,6 +141,9 @@
     <findStrings>
       <find>automata</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -107,21 +167,22 @@
         <option value="$PROJECT_DIR$/Views/Creation/alphabet.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/reconnaissance.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/etatUI.py" />
         <option value="$PROJECT_DIR$/Views/Creation/creation.py" />
         <option value="$PROJECT_DIR$/Views/Creation/makeView.py" />
         <option value="$PROJECT_DIR$/Views/views.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/see.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/makeView.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/alphabetView.py" />
         <option value="$PROJECT_DIR$/Views/Creation/alphabetUI.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/etatView.py" />
         <option value="$PROJECT_DIR$/Views/Creation/transitionAddUI.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/transitionView.py" />
-        <option value="$PROJECT_DIR$/Views/main.py" />
-        <option value="$PROJECT_DIR$/Models/Etat.py" />
         <option value="$PROJECT_DIR$/Models/Alphabet.py" />
+        <option value="$PROJECT_DIR$/Views/Affichage/see.py" />
+        <option value="$PROJECT_DIR$/Views/main.py" />
         <option value="$PROJECT_DIR$/Models/Automate.py" />
+        <option value="$PROJECT_DIR$/Views/Creation/etatUI.py" />
+        <option value="$PROJECT_DIR$/Models/Etat.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -139,28 +200,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="automata-brain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brain" type="462c0819:PsiDirectoryNode" />
+              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="automata-brain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brain" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brain" type="462c0819:PsiDirectoryNode" />
+              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="automata-brain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brain" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="Affichage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brain" type="462c0819:PsiDirectoryNode" />
+              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
               <item name="Creation" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -172,7 +222,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -200,11 +250,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Automate">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="Automate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="automata-brain" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Models" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -340,8 +393,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Automate" />
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.Automate" />
         <item itemvalue="Python.creation" />
         <item itemvalue="Python.helloView" />
         <item itemvalue="Python.ui-creation" />
@@ -366,6 +419,7 @@
       <workItem from="1580320883135" duration="17889000" />
       <workItem from="1580366999170" duration="20600000" />
       <workItem from="1580408452730" duration="11628000" />
+      <workItem from="1580424870687" duration="3020000" />
     </task>
     <servers />
   </component>
@@ -399,7 +453,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83662000" />
+    <option name="totallyTimeSpent" value="86682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,15 +465,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15075758" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1636953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329653" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47003156" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33445945" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -429,7 +483,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3280757" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.45899054" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.46044305" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -468,7 +522,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Models/Automate.py</url>
-          <line>537</line>
+          <line>544</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -594,26 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/see.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="e#196#238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/etatUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="941">
-          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-          <folding>
-            <element signature="e#197#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Affichage/alphabetView.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
@@ -674,44 +708,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Transition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Affichage/see.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="71" column="135" selection-start-line="71" selection-start-column="135" selection-end-line="71" selection-end-column="135" />
+          <folding>
+            <element signature="e#196#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Views/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5085">
-          <caret line="345" column="35" selection-start-line="345" selection-start-column="35" selection-end-line="345" selection-end-column="35" />
+        <state relative-caret-position="112">
+          <caret line="349" column="80" selection-start-line="349" selection-start-column="80" selection-end-line="349" selection-end-column="80" />
           <folding>
             <element signature="e#197#239#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Transition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Etat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/Alphabet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="450">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Automate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="80" column="18" lean-forward="true" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+        <state relative-caret-position="93">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
           <folding>
-            <element signature="e#47#87#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Creation/etatUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#197#239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Etat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-450">
+            <caret column="1" selection-start-column="1" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

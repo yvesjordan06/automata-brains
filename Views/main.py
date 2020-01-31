@@ -344,6 +344,10 @@ class Ui_MainWindow(object):
         # Binding
         self.actionVoir.triggered.connect(self.automate.visualiser)
         self.viewToolButton.clicked.connect(self.automate.visualiser)
+        self.minimizeToolButton.clicked.connect(self.minimizer)
+        self.completeToolButton.clicked.connect(lambda: self.automate.copie_automate(self.automate.completer()))
+        self.determineToolButton.clicked.connect(lambda: self.automate.copie_automate(self.automate.determiniser()))
+        self.newToolButton.clicked.connect(lambda: self.automate.copie_automate(Automate(Alphabet([]),[],None,[],[])))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -386,6 +390,9 @@ class Ui_MainWindow(object):
         self.actionNotre_Equipe.setText(_translate("MainWindow", "Notre Equipe"))
         self.actionAide.setText(_translate("MainWindow", "Aide"))
         self.actionLien_Utiles.setText(_translate("MainWindow", "Lien Utiles"))
+
+    def minimizer(self):
+        self.automate.copie_automate(self.automate.determiniser())
 
 
 alphabet = Alphabet(['1', '2', '3'])

@@ -41,7 +41,10 @@ class Etat:
     def __eq__(self, p):
         "modifier la manier avec laquelle le python comprend les operateurs '='"
         etat_self = self.__valeur
-        etat1 = p.__valeur
+        try:
+            etat1 = p.__valeur
+        except:
+            return False
         return etat_self == etat1
 
     def __repr__(self):
