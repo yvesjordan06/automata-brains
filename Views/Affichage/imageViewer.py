@@ -15,13 +15,15 @@ class QImageViewer(QWidget):
 
         super().__init__()
         self.test = test
-        self.test.image.connect(self.open)
+        self.test.automate_modifier.connect(self.open)
         self.image = QLabel()
         self.image.setText('Hello')
         self.lay = QVBoxLayout()
         self.lay.addWidget(self.image)
         self.setLayout(self.lay)
-    def open(self,path):
+        #self.open()
+    def open(self):
+        path = self.test.enregistrer_image(f"{hash(self.test)}{self.test.nom}")
         print(path)
         p = QPixmap(path)
         self.image.setPixmap(p)

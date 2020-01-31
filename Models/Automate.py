@@ -258,7 +258,7 @@ class Automate(QObject):
         kwargs.setdefault('format', f'png')
 
         f = Digraph('Test', filename=kwargs['filename'], format=kwargs['format'])
-        # f.attr(label=f'Type: \n {self.check_type()}')
+        f.attr(label=f'Type: \n {self.type}')
         f.attr(rankdir='LR', size='15,5')
         f.attr('node', shape='none', height='0', width='0')
         f.node('')
@@ -272,6 +272,26 @@ class Automate(QObject):
         return f.view()
 
         pass
+
+
+    def enregistrer_image(self, filename,):
+        # Si vous avez installer graphviz decommentez
+
+
+        f = Digraph('Test', filename=f'../diagrams/{filename}', format='svg')
+        # f.attr(label=f'Type: \n {self.check_type()}')
+        f.attr(rankdir='LR', size='15,5')
+        f.attr('node', shape='none', height='0', width='0')
+        f.node('')
+        f.attr('node', shape='doublecircle')
+        for etat in self.etats_finaux:
+            f.node(str(etat))
+        f.attr('node', shape='circle')
+        f.edge('', str(self.etat_initial))
+        for t in self.transitions:
+            f.edge(str(t.depart), str(t.arrive), label=t.symbole)
+        return f.view(cleanup=True)
+
     """
     Permet de visualiser l'image sans la stocker dans la memoire
     """
@@ -332,27 +352,43 @@ class Automate(QObject):
     :return bool
     '''
     def reconnais_mot(self, mot:str)->bool:
+        print(f'je dois reconnaitre {mot}')
         #TODO Determiniser d'abord avant de reconnaitre
         if not isinstance(mot, str):
             raise TypeError('Type str uniquement')
 
-        suivant = self.etat_initial
+        suivant = [self.etat_initial]
         try:
             for symbole in mot:
-                destinations = self.read(suivant, symbole)
-                if destinations:
-                    suivant = destinations[0]
-                else:
-                    return False
+                print(f"symbole {symbole}")
+                for i in suivant:
+                    destinations = self.__etats_destination(i, symbole)
+                    print(f"destination {i} sur {symbole} => {destinations}")
+                    print(bool(destinations))
+                    if destinations:
+                        suivant = destinations
+                    else:
+                        return False
+            print('ici')
+            print(self.etats_finaux.intersection(suivant))
             if set(suivant).intersection(self.etats_finaux):
                 return True
             else:
                 return False
-        except:
+        except e:
+            print(e)
             return False
 
-    def reconnais_text(self, text:str)->str:
-        return f"Requete: \n \n{text} \n\n\n Resultat: \n \n{text} resultat"
+    def reconnais_text(self, text:str, separateur=' ')->str:
+        mots = text.split(separateur)
+        resultat = list()
+
+        for mot in mots:
+            if self.reconnais_mot(mot):
+                resultat.append(f"<reconnue>{mot}</reconnue>")
+            else:
+                resultat.append(f"<inconnu>{mot}</inconnue>")
+        return f"Requete: \n \n{text} \n\n\n Resultat: \n \n{' '.join(resultat)}"
 
     """
     Cette fonction determinise l'automate actuelle
@@ -502,8 +538,10 @@ class Automate(QObject):
 
         for pair in paire_etat:
             if len(pair.intersection(self.etats_finaux)) == 1:
+                print(f"paire chosi {pair}")
                 paire_traite.append(frozenset(pair))
-        a_state_has_been_marked = True
+                a_state_has_been_marked = True
+
         while a_state_has_been_marked:
             a_state_has_been_marked = False
             for pair in paire_etat:
@@ -513,32 +551,42 @@ class Automate(QObject):
                         paire_resultat = set()
                         a = self.__etats_destination(local_pair[0], symbol)
                         b = self.__etats_destination(local_pair[-1], symbol)
-                        for i in a:
-                            paire_resultat.add(i)
-                        for i in b:
-                            paire_resultat.add(i)
+
+                        print(f"paire {pair} : {local_pair[0]} sur {symbol} => {a} ")
+                        print(f"paire {pair} : {local_pair[1]} sur {symbol} => {b} ")
+
+                        if a and b:
+                            paire_resultat = set(a+b)
+
                         if paire_resultat in paire_traite:
+                            print(f'nouvelle pair => {pair}')
                             paire_traite.append(frozenset(pair))
                             a_state_has_been_marked = True
+                            break
         # Generating new set of states
         unmarked_pair = set(paire_etat).difference(set(paire_traite))
+        print(f'paire non traite {unmarked_pair}')
         etats_utiliser = set()
         new_states = set()
         nouveau_vers_ancien_etat = dict()
         for etat in self.etats:
-            etat_acuel = etat
+            etat_ajouter = False
+            etat_actuel = etat
             if etat in etats_utiliser:
                 continue
             for pair in unmarked_pair:
-                if etat_acuel in pair:
+                if etat_actuel in pair:
                     etats_utiliser.update({x for x in pair})
-
-                    nouveau = list(pair)
-                    nouveau.append(etat_acuel)
-                    etat_acuel = Etat(','.join([str(x) for x in nouveau]))
-                    nouveau_vers_ancien_etat[etat_acuel] = nouveau
-
-            new_states.add(etat_acuel)
+                    print(f"etat utiliser = {etats_utiliser}")
+                    nouvel_etat = Etat(','.join([str(x) for x in pair]))
+                    nouveau_vers_ancien_etat[nouvel_etat] = pair
+                    new_states.add(nouvel_etat)
+                    etat_ajouter = True
+            if not etat_ajouter :
+                new_states.add(etat_actuel)
+                nouveau_vers_ancien_etat[etat_actuel] = [etat_actuel]
+            #print(f"nouveau_vers_ancien_etat")
+            print(f"Nouvelle etats {new_states}")
 
         # Generation new set of transitions
         read_trans = list()
@@ -548,6 +596,7 @@ class Automate(QObject):
         for state in new_states:
             if self.etat_initial in nouveau_vers_ancien_etat[state]:
                 new_initial_state = state
+                print(f"Nouvel etat initial {state}")
             for f_state in self.etats_finaux:
                 if f_state in nouveau_vers_ancien_etat[state]:
                     new_final_states.add(state)
@@ -562,16 +611,17 @@ class Automate(QObject):
                 if _from in nouveau_vers_ancien_etat[state]:
                     result = self.__etats_destination(_from, _on)
                     read_trans.append((_from, _on))
-                    for x_state in result:
+
+                    for result_state in result:
                         for i in new_states:
-                            if x_state in nouveau_vers_ancien_etat[i]:
+                            if result_state in nouveau_vers_ancien_etat[i]:
                                 trans = Transition(state, _on, i)
                                 new_transitions.add(trans)
 
         return Automate(self.alphabet, new_states, new_initial_state, new_final_states, list(new_transitions))
 
 
-    def uion_automate(self, automate):
+    def union_automate(self, automate):
         automate_1 = self.completer()
         if isinstance(automate, Automate):
             automate_2 = automate.completer()
@@ -651,14 +701,24 @@ if __name__ == '__main__':
     t4 = Transition(e, 'm', f)
 
     automate = Automate(alphabet, [a, b, c], a, [b], [t1, t2, t3])
-    automate2 = Automate(alphabet2, [e,f], e, [f], [t4])
+    automate2 = Automate(alphabet2, [e, f], e, [f], [t4])
     print(automate.alphabet)
     automate.definir_nom('hiro')
     print(automate.nom)
     automate.visualiser()
-    automate2.visualiser()
-    automate.uion_automate(automate).visualiser()
-    automate.uion_automate(automate).determiniser().visualiser()
+    automate.minimiser().visualiser()
+    #automate2.visualiser()
+    #automate.union_automate(automate).visualiser()
+    #automate.union_automate(automate).determiniser().visualiser()
+    #automate.definir_nom('hiro')
+    #print(automate.nom)
+    #automate.visualiser()
+    #automate.minimiser().visualiser()
+    #automate.determiniser().visualiser()
+    #automate.minimiser().visualiser()
+    #automate2.visualiser()
+    #automate.uion_automate(automate2).visualiser()
+    #automate.uion_automate(automate2).determiniser().visualiser()
     #automate.minimiser().visualiser()
     #automate.visualiser()
     #automate.convertir_en_nfa().visualiser()
