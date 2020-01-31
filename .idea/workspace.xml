@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="UI Modification&#10;Tool Button Binding&#10;Selecting and reading from files&#10;New automata creation&#10;Multiple Automata handle and switch">
-      <change afterPath="$PROJECT_DIR$/Views/Affichage/imageViewer.py" afterDir="false" />
+    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Models/Prefix.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Automate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Automate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/makeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/makeView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/see.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/see.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/transitionView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/transitionView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main.py" afterDir="false" />
     </list>
     <ignored path="diagrams/" />
     <ignored path=".idea/vcs.xml" />
@@ -23,6 +19,7 @@
     <SUITE FILE_PATH="coverage/automata_brain$ui_transition__1_.coverage" NAME="ui-transition (1) Coverage Results" MODIFIED="1580202281476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Alphabet_test_EtatTestCase.coverage" NAME="Unittests for Alphabet_test.EtatTestCase Coverage Results" MODIFIED="1580300488256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Transition_test_AlphabetTestCase.coverage" NAME="Unittests for Transition_test.AlphabetTestCase Coverage Results" MODIFIED="1580300803918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
+    <SUITE FILE_PATH="coverage/automata_brains$Prefix.coverage" NAME="Prefix Coverage Results" MODIFIED="1580471992980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Etat_test_EtatTestCase.coverage" NAME="Unittests for Etat_test.EtatTestCase Coverage Results" MODIFIED="1580300224144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Transition_test_AlphabetTestCase_test_epsilon.coverage" NAME="Unittests for Transition_test.AlphabetTestCase.test_epsilon Coverage Results" MODIFIED="1580300940294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$creation.coverage" NAME="creation Coverage Results" MODIFIED="1580332965011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
@@ -45,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Models/Automate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4065">
-              <caret line="271" column="23" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
+            <state relative-caret-position="79">
+              <caret line="660" column="51" selection-start-line="660" selection-start-column="51" selection-end-line="660" selection-end-column="51" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -58,97 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/reconnaissance.py">
+        <entry file="file://$PROJECT_DIR$/Models/Prefix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-274">
-              <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/Etat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="364" column="23" lean-forward="true" selection-start-line="364" selection-start-column="23" selection-end-line="364" selection-end-column="23" />
-              <folding>
-                <element signature="e#197#239#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/makeView.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/central.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-              <folding>
-                <element signature="e#200#242#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/transitionView.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-              <folding>
-                <element signature="e#207#249#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/imageViewer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/bigReconnaisance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+            <state relative-caret-position="1440">
+              <caret line="96" column="57" selection-start-line="88" selection-start-column="4" selection-end-line="96" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -208,10 +118,11 @@
         <option value="$PROJECT_DIR$/Views/Affichage/see.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/bigReconnaisance.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/transitionView.py" />
-        <option value="$PROJECT_DIR$/Models/Automate.py" />
         <option value="$PROJECT_DIR$/Views/main.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/central.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/imageViewer.py" />
+        <option value="$PROJECT_DIR$/Models/Prefix.py" />
+        <option value="$PROJECT_DIR$/Models/Automate.py" />
       </list>
     </option>
   </component>
@@ -295,8 +206,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.Automate">
     <configuration name="Automate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="automata-brain" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/Automate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Prefix" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="automata-brain" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,9 +239,9 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/Automate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/Prefix.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -332,28 +262,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Views/Creation/automataSelect.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="creation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="automata-brain" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Views/Creation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Views/Creation/creation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -432,17 +340,17 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.Automate" />
-      <item itemvalue="Python.creation" />
       <item itemvalue="Python.automataSelect" />
       <item itemvalue="Python.imageViewer" />
+      <item itemvalue="Python.Prefix" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Automate" />
+        <item itemvalue="Python.Prefix" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.imageViewer" />
         <item itemvalue="Python.automataSelect" />
-        <item itemvalue="Python.Automate" />
-        <item itemvalue="Python.creation" />
       </list>
     </recent_temporary>
   </component>
@@ -464,7 +372,7 @@
       <workItem from="1580320883135" duration="17889000" />
       <workItem from="1580366999170" duration="20600000" />
       <workItem from="1580408452730" duration="11628000" />
-      <workItem from="1580424870687" duration="18635000" />
+      <workItem from="1580424870687" duration="29194000" />
     </task>
     <task id="LOCAL-00001" summary="Minor bug fixes">
       <created>1580429146580</created>
@@ -480,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580435433698</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated Visualisation ui">
+      <created>1580444659554</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580444659554</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -513,7 +428,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102297000" />
+    <option name="totallyTimeSpent" value="112856000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,25 +440,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="1024" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1636953" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1530303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329653" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33445945" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33386075" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3280757" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32753164" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32911393" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3277027" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.46044305" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.6455696" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -580,14 +495,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minor bug fixes" />
     <MESSAGE value="UI Modification&#10;Tool Button Binding&#10;Selecting and reading from files&#10;New automata creation&#10;Multiple Automata handle and switch" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Modification&#10;Tool Button Binding&#10;Selecting and reading from files&#10;New automata creation&#10;Multiple Automata handle and switch" />
+    <MESSAGE value="Updated Visualisation ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Visualisation ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Models/Automate.py</url>
-          <line>549</line>
+          <line>664</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -816,16 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Automate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4065">
-          <caret line="271" column="23" selection-start-line="271" selection-start-column="23" selection-end-line="271" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
@@ -872,10 +778,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Affichage/imageViewer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="450">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Prefix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="96" column="57" selection-start-line="88" selection-start-column="4" selection-end-line="96" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Automate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="660" column="51" selection-start-line="660" selection-start-column="51" selection-end-line="660" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>

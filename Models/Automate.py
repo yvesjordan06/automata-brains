@@ -484,6 +484,112 @@ class Automate(QObject):
         else:
             raise TypeError('Type Automate attendu ')
 
+
+    def minimiser(self):
+        if self.type != Type.AFD:
+            return self.determiniser().minimiser()
+
+        paire_etat = list()
+        paire_traite = list()
+        etats_temporaire = self.etats.copy()
+        for etat in self.etats:
+            etats_temporaire.remove(etat)
+            for etat_temporaire in etats_temporaire:
+                pair = {etat, etat_temporaire}
+                paire_etat.append(frozenset(pair))
+
+        # Scanning pairs and marking
+
+        for pair in paire_etat:
+            if len(pair.intersection(self.etats_finaux)) == 1:
+                paire_traite.append(frozenset(pair))
+        a_state_has_been_marked = True
+        while a_state_has_been_marked:
+            a_state_has_been_marked = False
+            for pair in paire_etat:
+                if pair not in paire_traite:
+                    local_pair = list(pair)
+                    for symbol in self.alphabet.list:
+                        paire_resultat = set()
+                        a = self.__etats_destination(local_pair[0], symbol)
+                        b = self.__etats_destination(local_pair[-1], symbol)
+                        for i in a:
+                            paire_resultat.add(i)
+                        for i in b:
+                            paire_resultat.add(i)
+                        if paire_resultat in paire_traite:
+                            paire_traite.append(frozenset(pair))
+                            a_state_has_been_marked = True
+        # Generating new set of states
+        unmarked_pair = set(paire_etat).difference(set(paire_traite))
+        etats_utiliser = set()
+        new_states = set()
+        nouveau_vers_ancien_etat = dict()
+        for etat in self.etats:
+            etat_acuel = etat
+            if etat in etats_utiliser:
+                continue
+            for pair in unmarked_pair:
+                if etat_acuel in pair:
+                    etats_utiliser.update({x for x in pair})
+
+                    nouveau = list(pair)
+                    nouveau.append(etat_acuel)
+                    etat_acuel = Etat(','.join([str(x) for x in nouveau]))
+                    nouveau_vers_ancien_etat[etat_acuel] = nouveau
+
+            new_states.add(etat_acuel)
+
+        # Generation new set of transitions
+        read_trans = list()
+        new_transitions = set()
+        new_initial_state = set()
+        new_final_states = set()
+        for state in new_states:
+            if self.etat_initial in nouveau_vers_ancien_etat[state]:
+                new_initial_state = state
+            for f_state in self.etats_finaux:
+                if f_state in nouveau_vers_ancien_etat[state]:
+                    new_final_states.add(state)
+
+        for transition in self.transitions:
+            _from = transition.depart
+            _to = transition.arrive
+            _on = transition.symbole
+            if (_from, _on) in read_trans:
+                continue
+            for state in new_states:
+                if _from in nouveau_vers_ancien_etat[state]:
+                    result = self.__etats_destination(_from, _on)
+                    read_trans.append((_from, _on))
+                    for x_state in result:
+                        for i in new_states:
+                            if x_state in nouveau_vers_ancien_etat[i]:
+                                trans = Transition(state, _on, i)
+                                new_transitions.add(trans)
+
+        return Automate(self.alphabet, new_states, new_initial_state, new_final_states, list(new_transitions))
+
+
+    def uion_automate(self, automate):
+        automate_1 = self.completer()
+        if isinstance(automate, Automate):
+            automate_2 = automate.completer()
+            new_alphabet = set()
+            for i in automate_1.alphabet.list:
+                new_alphabet.add(i)
+            for i in automate_2.alphabet.list:
+                new_alphabet.add(i)
+
+            new_alphabet = Alphabet(new_alphabet)
+            new_transition = automate_1.transitions.union(automate_2.transitions)
+            new_etat = automate_1.etats.union(automate_2.etats)
+            new_etat.add(Etat('start'))
+            new_transition.add(Transition(Etat('start'), '', automate_1.etat_initial))
+            new_transition.add(Transition(Etat('start'), '', automate_2.etat_initial))
+            new_finaux = automate_1.etats_finaux.union(automate_2.etats_finaux)
+
+            return Automate(new_alphabet, new_etat, Etat('start'), new_finaux, new_transition)
     '''
     Determine le type de l'automate
     
@@ -531,20 +637,29 @@ class Automate(QObject):
 
 
 if __name__ == '__main__':
-    alphabet = Alphabet(['1', '2', '3'])
-    a = Etat('a')
-    b = Etat('b')
-    c = Etat('c')
-    t1 = Transition(a, '1', b)
-    t5 = Transition(b, '', c)
-    t2 = Transition(a, '1', a)
-    t6 = Transition(a, '', c)
-    t3 = Transition(b, '2', b)
-    t4 = Transition(b, '1', b)
-    automate = Automate(alphabet, [a, b, c], a, [c], [t1, t5, t2, t6])
+    alphabet = Alphabet(['a', 'b'])
+    alphabet2 = Alphabet(['m'])
+    a = Etat('q1')
+    b = Etat('q2')
+    c = Etat('q3')
+    e = Etat('q4')
+    f = Etat('q5')
+    t1 = Transition(a, 'a', b)
+    t2 = Transition(b, 'b', c)
+    t3 = Transition(c, 'a', b)
+
+    t4 = Transition(e, 'm', f)
+
+    automate = Automate(alphabet, [a, b, c], a, [b], [t1, t2, t3])
+    automate2 = Automate(alphabet2, [e,f], e, [f], [t4])
     print(automate.alphabet)
     automate.definir_nom('hiro')
     print(automate.nom)
+    automate.visualiser()
+    automate2.visualiser()
+    automate.uion_automate(automate).visualiser()
+    automate.uion_automate(automate).determiniser().visualiser()
+    #automate.minimiser().visualiser()
     #automate.visualiser()
     #automate.convertir_en_nfa().visualiser()
     #automate.determiniser().visualiser()
