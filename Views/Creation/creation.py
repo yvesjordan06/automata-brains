@@ -13,8 +13,9 @@ from Models.Automate import Automate
 from Views.Creation.makeView import *
 
 class CreationView(object):
-    def __init__(self, automate:Automate):
+    def __init__(self, automate:Automate, list:dict):
         self.automate = automate
+        self.list = list
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(115, 125)
@@ -22,7 +23,7 @@ class CreationView(object):
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.groupBox = QtWidgets.QGroupBox(Form)
         self.groupBox.setObjectName("groupBox")
-        self.createBtn= QtWidgets.QPushButton()
+        self.createBtn= AutomataSelectWindow(self.automate, self.list)
 
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.groupBox)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -39,7 +40,7 @@ class CreationView(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Creation"))
         self.groupBox.setTitle(_translate("Form", "Creation"))
-        self.createBtn.setText(_translate("GroupBox", "Creer l'automate"))
+        #self.createBtn.setText(_translate("GroupBox", "Creer l'automate"))
 
 
 

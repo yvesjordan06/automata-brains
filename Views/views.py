@@ -8,10 +8,10 @@ from Views.Affichage.see import Ui_Form as SeeView
 class CreateAutomataView(QtWidgets.QWidget):
 
 
-    def __init__(self, automate:Automate):
+    def __init__(self, automate:Automate, list:dict):
         super(CreateAutomataView, self).__init__()
 
-        self.ui = CreationView(automate)
+        self.ui = CreationView(automate, list)
 
         self.ui.setupUi(self)
 

@@ -19,6 +19,7 @@ from Models.Alphabet import Alphabet
 class Ui_MainWindow(object):
     def __init__(self, automate:Automate):
         self.automate = automate
+        self.liste_automate = dict()
 
 
     def setupUi(self, MainWindow):
@@ -243,6 +244,15 @@ class Ui_MainWindow(object):
         self.viewToolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.viewToolButton.setObjectName("viewToolButton")
         self.horizontalLayout_3.addWidget(self.viewToolButton)
+        self.unionToolButton = QtWidgets.QToolButton(self.frame)
+        self.unionToolButton.setToolTipDuration(5)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("icons/quit.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.unionToolButton.setIcon(icon9)
+        self.unionToolButton.setIconSize(QtCore.QSize(32, 32))
+        self.unionToolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        self.unionToolButton.setObjectName("unionToolButton")
+        self.horizontalLayout_3.addWidget(self.unionToolButton)
         self.infoToolButton = QtWidgets.QToolButton(self.frame)
         self.infoToolButton.setToolTipDuration(5)
         icon7 = QtGui.QIcon()
@@ -267,7 +277,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         # AUTOMATA
-        self.creation = CreateAutomataView(self.automate)
+        self.creation = CreateAutomataView(self.automate, self.liste_automate)
         self.creation.setObjectName("creation")
         self.horizontalLayout.addWidget(self.creation)
 
@@ -347,10 +357,13 @@ class Ui_MainWindow(object):
         self.minimizeToolButton.clicked.connect(self.minimizer)
         self.completeToolButton.clicked.connect(lambda: self.automate.copie_automate(self.automate.completer()))
         self.determineToolButton.clicked.connect(lambda: self.automate.copie_automate(self.automate.determiniser()))
-        self.newToolButton.clicked.connect(lambda: self.automate.copie_automate(Automate(Alphabet([]),[],None,[],[])))
+        self.newToolButton.clicked.connect(lambda: self.newDialog())
+        self.openToolButton.clicked.connect(lambda: self.showDialog())
+        self.unionToolButton.clicked.connect(lambda: self.showUnionDialog())
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
+        self.window = MainWindow
         MainWindow.setWindowTitle(_translate("MainWindow", self.automate.nom))
         self.newToolButton.setToolTip(_translate("MainWindow", "Nouveau"))
         self.newToolButton.setStatusTip(_translate("MainWindow", "Creer un nouvel automate"))
@@ -370,6 +383,9 @@ class Ui_MainWindow(object):
         self.viewToolButton.setToolTip(_translate("MainWindow", "Visualizer"))
         self.viewToolButton.setStatusTip(_translate("MainWindow", "Visualiser l\'automate"))
         self.viewToolButton.setText(_translate("MainWindow", "Visualiser"))
+        self.unionToolButton.setToolTip(_translate("MainWindow", "Union"))
+        self.unionToolButton.setStatusTip(_translate("MainWindow", "Fusionner 2 automates"))
+        self.unionToolButton.setText(_translate("MainWindow", "Union"))
         self.infoToolButton.setToolTip(_translate("MainWindow", "Infos"))
         self.infoToolButton.setStatusTip(_translate("MainWindow", "Affiche les infos a propos de l\'automate"))
         self.infoToolButton.setText(_translate("MainWindow", "Infos"))
@@ -393,6 +409,37 @@ class Ui_MainWindow(object):
 
     def minimizer(self):
         self.automate.copie_automate(self.automate.determiniser())
+
+    def showDialog(self):
+        fname = QtWidgets.QFileDialog.getOpenFileName(self.window,filter='*.txt',caption='Selectionnez un fichier a analyser')
+
+        if fname[0]:
+            f = open(fname[0], 'r')
+
+            with f:
+                data = f.read()
+                print(' '.join(data.split('\n')))
+    def showUnionDialog(self):
+        if not self.liste_automate or len(self.liste_automate < 2):
+            self.window.setStatusTip('Aucun automate')
+            return
+        item, ok = QtWidgets.QInputDialog.getItem(self.window, "Faire l'union avec",
+                                        "Liste des automates", self.liste_automate, 0, False)
+
+        if ok and item:
+            self.le.setText(item)
+    def newDialog(self):
+        text, ok = QtWidgets.QInputDialog.getText(self.window,'Nouvel Automate','Entrez le nom')
+
+        if ok:
+            a = Automate(Alphabet([]), [], None, [], [])
+            a.definir_nom(text)
+            try:
+                self.liste_automate[text] = a
+            except:
+                self.liste_automate[text+'(1)'] = a
+            self.creation.ui.createBtn.setState()
+            self.automate.copie_automate(a)
 
 
 alphabet = Alphabet(['1', '2', '3'])
