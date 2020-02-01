@@ -14,6 +14,11 @@ class Type:
 
 
 class Automate(QObject):
+    statecount = 0
+
+    @staticmethod
+    def epsilon():
+        return ""
 #class Automate:
     # Signale de modification
     automate_modifier = pyqtSignal()
@@ -138,6 +143,40 @@ class Automate(QObject):
             if etat in self.__etats:
                 self.__etat_finaux.add(etat)
                 print(f"Etat Final {etat}")
+                self.automate_modifier.emit()
+            else:
+                raise ValueError("valeur non presente")
+        else:
+            raise TypeError("type non prit en charge")
+
+    def retirer_final(self, etat):
+        if isinstance(etat, Etat):
+            if etat in self.__etats:
+                self.__etat_finaux.remove(etat)
+                print(f"Etat Final Retirer {etat}")
+                self.automate_modifier.emit()
+            else:
+                raise ValueError("valeur non presente")
+        else:
+            raise TypeError("type non prit en charge")
+
+    def remplacer_etat(self,ancien, nouveau):
+        if isinstance(ancien, Etat) and isinstance(nouveau, Etat):
+            if ancien in self.__etats:
+                self.ajouter_etats(nouveau)
+                nouvelle_transition = list()
+                for transtion in self.transitions:
+                    if transtion.depart == ancien:
+                        nouvelle_transition.append(Transition(nouveau,transtion.symbole, transtion.arrive))
+                    if transtion.arrive == ancien:
+                        nouvelle_transition.append(Transition(transtion.depart, transtion.symbole, nouveau))
+                for transtion in nouvelle_transition:
+                    self.ajoute_transition(transtion)
+                if self.etat_initial == ancien:
+                    self.ajouter_initital(nouveau)
+                if ancien in self.etats_finaux:
+                    self.ajouter_final(nouveau)
+                self.supprime_etat(ancien)
                 self.automate_modifier.emit()
             else:
                 raise ValueError("valeur non presente")
@@ -388,6 +427,26 @@ class Automate(QObject):
             else:
                 resultat.append(f"<inconnu>{mot}</inconnue>")
         return f"Requete: \n \n{text} \n\n\n Resultat: \n \n{' '.join(resultat)}"
+
+
+    def iter(self, value: str):
+        self.ajouter_symbole(str(value))
+        if self.etat_initial is None or len(self.etats_finaux) == 0:
+            self.__etat_initial = Etat(f'i{self.statecount}')
+            self.__etat_finaux = [Etat(f'f{self.statecount}')]
+            self.ajouter_etats(Etat(f'i{self.statecount}'))
+            self.ajouter_etats(Etat(f'f{self.statecount}'))
+            trans = Transition(self.etat_initial, str(value), list(self.etats_finaux)[-1])
+            self.ajoute_transition(trans)
+            Automate.statecount += 1
+
+        else:
+            s = Etat(f'S{self.statecount}')
+            final = list(self.etats_finaux)[-1]
+            self.ajouter_etats(s)
+            trans = Transition(final, str(value), s)
+            self.__etat_finaux = [s]
+            self.ajoute_transition(trans)
 
     """
     Cette fonction determinise l'automate actuelle
