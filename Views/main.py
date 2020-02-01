@@ -443,7 +443,7 @@ class Ui_MainWindow(object):
         if not self.liste_automate or len(self.liste_automate) < 2:
             self.window.setStatusTip('Aucun automate')
             return
-        item, ok = QtWidgets.QInputDialog.getItem(self.window, "Faire l'union avec",
+        item, ok = QtWidgets.QInputDialog.getItem(self.window, f"Faire l'union de {self.automate.nom} avec",
                                         "Liste des automates", self.liste_automate, 0, False)
 
         if ok and item:
