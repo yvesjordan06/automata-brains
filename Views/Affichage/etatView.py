@@ -117,6 +117,7 @@ class Ui_Form(object):
             etat = Etat(select.text())
             if etat in self.automate.etats_finaux:
                 #TODO faire le methode pour retirer un etat final
+                self.automate.retirer_final(etat)
                 pass
             else:
                 self.automate.ajouter_final(etat)
@@ -126,6 +127,7 @@ class Ui_Form(object):
         for select in selected:
             etat = Etat(select.text())
             #TODO Methode pour supprimer un etat
+            self.automate.supprime_etat(etat)
             pass
 
 if __name__ == "__main__":

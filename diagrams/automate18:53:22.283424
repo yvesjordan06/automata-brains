@@ -1,0 +1,24 @@
+digraph Test {
+	label="Type: 
+ Automate Fini Deterministe"
+	rankdir=LR size="15,5"
+	node [height=0 shape=none width=0]
+	""
+	node [shape=doublecircle]
+	"{a,b}"
+	a
+	node [shape=circle]
+	"" -> a
+	a -> PUIS [label=2]
+	"{a,b}" -> "{a,b}" [label=1]
+	"{a,b}" -> "{a,b}" [label=2]
+	"{a,b}" -> 5 [label=3]
+	a -> "{a,b}" [label=1]
+	a -> PUIS [label=3]
+	5 -> "{a,b}" [label=3]
+	PUIS -> PUIS [label=3]
+	5 -> PUIS [label=1]
+	PUIS -> PUIS [label=1]
+	PUIS -> PUIS [label=2]
+	5 -> PUIS [label=2]
+}

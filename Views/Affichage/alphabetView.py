@@ -73,7 +73,7 @@ class Ui_Form(object):
 
         for symbole in selected_symbols:
             #TODO Bind this method to automate delete symbol instead
-            self.automate.alphabet.supprime_symbole(symbole)
+            self.automate.supprime_symbole(symbole)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,16 @@
+digraph Test {
+	rankdir=LR size="15,5"
+	node [height=0 shape=none width=0]
+	""
+	node [shape=doublecircle]
+	a
+	"{c,b,a}"
+	node [shape=circle]
+	"" -> a
+	a -> "{c,b,a}" [label=1]
+	"{b}" -> "{b}" [label=1]
+	"{c,b,a}" -> a [label=3]
+	a -> "{b}" [label=2]
+	"{c,b,a}" -> "{c,b,a}" [label=1]
+	"{c,b,a}" -> "{b}" [label=2]
+}

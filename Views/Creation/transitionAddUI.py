@@ -97,9 +97,9 @@ class Ui_Form(object):
         self.etatArriveBox.addItems([str(etat) for etat in self.automate.etats])
 
     def action_create_transition(self):
-        depart = self.etatDepartBox.currentText()
+        arrive = self.etatDepartBox.currentText()
         symbole = self.symbolBox.currentText()
-        arrive = self.etatArriveBox.currentText()
+        depart = self.etatArriveBox.currentText()
 
         depart = Etat(depart)
         arrive = Etat(arrive)
