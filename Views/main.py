@@ -433,14 +433,16 @@ class Ui_MainWindow(object):
                 self.automate.reconnaissance.emit(result)
 
     def showUnionDialog(self):
-        if not self.liste_automate or len(self.liste_automate < 2):
+        if not self.liste_automate or len(self.liste_automate) < 2:
             self.window.setStatusTip('Aucun automate')
             return
         item, ok = QtWidgets.QInputDialog.getItem(self.window, "Faire l'union avec",
                                         "Liste des automates", self.liste_automate, 0, False)
 
         if ok and item:
-            self.le.setText(item)
+            print(f"item {item}")
+            print(type(self.liste_automate[item]))
+            self.automate.union_automate(self.liste_automate[item])
     def newDialog(self):
         text, ok = QtWidgets.QInputDialog.getText(self.window,'Nouvel Automate','Entrez le nom')
 

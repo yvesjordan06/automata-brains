@@ -20,8 +20,9 @@ identique sinon F alse
 class Etat:
     "la class etat"
 
-    def __init__(self,valeur):
+    def __init__(self,valeur,nom=None):
         self.__valeur=self.__verifier_type(valeur)
+        self.nom = nom
 
 
 
@@ -31,6 +32,11 @@ class Etat:
             return valeur
         else:
             raise TypeError("la valeur doit etre de type str")
+
+    def definir_nom(self, nom):
+        if not isinstance(nom, str):
+            raise TypeError('Type invalide, <str> attendu')
+        self.nom = nom
 
     def modifier_valeur(self, nouvelle_valeur):
         "cette fonction permet de modifier une valeur par une autre"

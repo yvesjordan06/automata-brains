@@ -9,14 +9,20 @@ class ExpressionReguliere:
         if not isinstance(expression, str):
             raise TypeError('Une expression est de type str')
         self.expression = expression
+        print(f"Expression {expression}")
 
     def convertir_en_afn(self):
         symbole_vers_automate = dict()
         expression_traite = list()
 
-        index_suivant = 1;
+        index_suivant = 0;
         longeur_expression = len(self.expression)
+        sauter_le_prochain_symbole = False
+
         for symbole in self.expression:
+            print(symbole)
+            index_suivant += 1
+            print(f"index suivant {index_suivant} total {longeur_expression}")
             if symbole == '(':
                 #TODO FAIRE CE CAS
                 pass
@@ -26,8 +32,13 @@ class ExpressionReguliere:
                 else:
                     continue
             else:
-                if index_suivant < longeur_expression:
-                    symbole_suivant = self.expression[index_suivant]
+                if sauter_le_prochain_symbole:
+                    continue
+                if index_suivant <= longeur_expression:
+                    try:
+                        symbole_suivant = self.expression[index_suivant]
+                    except:
+                        symbole_suivant = None
                     operation_de_concatenation = True
                     operation_de_addition = False
                     operation_de_kleen = False
@@ -41,7 +52,9 @@ class ExpressionReguliere:
                         automate_correspondant = GenerateurAutomate.faire_kleen(automate_correspondant)
                         symbole_vers_automate[f'{symbole}{index_suivant-1}'] = automate_correspondant
                         expression_traite.append(f'{symbole}{index_suivant-1}')
+
                     elif operation_de_addition:
+                        sauter_le_prochain_symbole = True
                         automate1 = GenerateurAutomate.a_partir_du_symbole(symbole)
                         automate2 = GenerateurAutomate.a_partir_du_symbole(self.expression[index_suivant+1])
                         automate_correspondant = GenerateurAutomate.faire_union(automate1, automate2)
@@ -51,6 +64,16 @@ class ExpressionReguliere:
                         automate_correspondant = GenerateurAutomate.a_partir_du_symbole(symbole)
                         symbole_vers_automate[f'{symbole}{index_suivant - 1}'] = automate_correspondant
                         expression_traite.append(f'{symbole}{index_suivant - 1}')
+                        print(expression_traite)
+
+            taken = False
+        for expression in expression_traite:
+            if not taken:
+                resultat = symbole_vers_automate[expression]
+            else:
+                resultat = GenerateurAutomate.faire_la_concatenation(resultat, symbole_vers_automate[expression])
+        return resultat
+
 
 class GenerateurAutomate:
     compteur_etat_initial = 0
@@ -149,7 +172,7 @@ class GenerateurAutomate:
         return Etat(f'Q{GenerateurAutomate.compteur_etat}')
 
     @staticmethod
-    def etat_initial():
+    def setat_initial():
         GenerateurAutomate.compteur_etat_initial += 1
         return Etat(f'I{GenerateurAutomate.compteur_etat_initial}')
 
@@ -162,6 +185,37 @@ class GenerateurAutomate:
 if __name__ == '__main__':
     a = Automate(Alphabet(['1']), [Etat('a'), Etat('b')], Etat('a'), [Etat('b')], [Transition(Etat('a'),'1',Etat('b'))])
     b = Automate(Alphabet(['2']), [Etat('c'), Etat('d')], Etat('c'), [Etat('d')], [Transition(Etat('c'),'2',Etat('d'))])
-    a.visualiser()
-    b.visualiser()
-    GenerateurAutomate.faire_kleen(a).visualiser()
+    #a.visualiser()
+    #b.visualiser()
+    #a.union_automate(b).determiniser().minimiser().visualiser()
+
+    alphabet = Alphabet(['a','b'])
+    a = Etat('1')
+    b = Etat('2')
+    c = Etat('3')
+    d = Etat('4')
+
+    t1 = Transition(a,'a',b)
+    t2 = Transition(a,'b',a)
+    t3 = Transition(b,'b',b)
+    t4 = Transition(b,'a',a)
+    t5 = Transition(c,'a',c)
+    t6 = Transition(c,'b',d)
+    t7 = Transition(d,'a',d)
+    t8 = Transition(d,'b',c)
+
+    automate1 = Automate(alphabet,[a,b], a, [a], [t1,t2,t3,t4])
+    automate1.definir_nom('pair de a')
+    automate2 = Automate(alphabet,[c,d], c, [c], [t5,t6,t7,t8])
+    automate2.definir_nom('pair de b')
+    #automate1.visualiser()
+    #automate2.visualiser()
+
+    automate1.union_automate(automate2).visualiser()
+    automate1.union_automate(automate2).determiniser().minimiser().visualiser()
+    #automate1.union_automate(automate2).determiniser().visualiser()
+    #automate1.union_automate(automate2).determiniser().visualiser()
+    #GenerateurAutomate.faire_union(a,b).visualiser()
+    #GenerateurAutomate.faire_kleen(a).visualiser()
+
+    #ExpressionReguliere('aa').convertir_en_afn().visualiser()

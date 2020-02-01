@@ -15,7 +15,10 @@ class Type:
 
 class Automate(QObject):
     statecount = 0
-
+    @staticmethod
+    def genere_etat():
+        Automate.statecount += 1
+        return Etat(f'E{Automate.statecount}')
     @staticmethod
     def epsilon():
         return ""
@@ -33,6 +36,7 @@ class Automate(QObject):
         self.__etat_finaux = self.__verifier_finaux(etat_finaux)
         self.__transitions = self.__verifier_transition(transition)
         self.nom = str()
+        self.parents = []
 
     def __verifier_alphabet(self, alphabet):
         if isinstance(alphabet, Alphabet):
@@ -390,6 +394,7 @@ class Automate(QObject):
     :return bool
     '''
     def reconnais_mot(self, mot:str)->bool:
+        print(f"Mes parents {[a.nom for a in self.parents]}")
         print(f'je dois reconnaitre {mot}')
         #TODO Determiniser d'abord avant de reconnaitre
         if not isinstance(mot, str):
@@ -410,6 +415,50 @@ class Automate(QObject):
             print('ici')
             print(self.etats_finaux.intersection(suivant))
             if set(suivant).intersection(self.etats_finaux):
+                text = 'reconnue'
+                parent_reconnue = False
+                for parent in self.parents:
+                    if parent.mot_est_reconnue(mot):
+                        if parent_reconnue:
+                            text += f" et {parent.nom}"
+                            continue
+                        parent_reconnue = True
+                        text=parent.nom
+                return f"<{text} : {mot}>"
+            else:
+                return f"<unk : {mot}>"
+        except e:
+            print(e)
+            return f"<unk : {mot}>"
+
+    '''
+       Cette fonction verifie si un mot est reconnu dans l'automate
+       :return bool
+       '''
+
+    def mot_est_reconnue(self, mot: str) -> bool:
+        print(f'je dois reconnaitre {mot}')
+        #return self.parents
+        # TODO Determiniser d'abord avant de reconnaitre
+        if not isinstance(mot, str):
+            raise TypeError('Type str uniquement')
+
+        suivant = [self.etat_initial]
+        try:
+            for symbole in mot:
+                #print(f"symbole {symbole}")
+                for i in suivant:
+                    destinations = self.__etats_destination(i, symbole)
+                    #print(f"destination {i} sur {symbole} => {destinations}")
+                    #print(bool(destinations))
+                    if destinations:
+                        suivant = destinations
+                    else:
+                        return False
+            #print('ici')
+            #print(self.etats_finaux.intersection(suivant))
+            if set(suivant).intersection(self.etats_finaux):
+
                 return True
             else:
                 return False
@@ -418,14 +467,12 @@ class Automate(QObject):
             return False
 
     def reconnais_text(self, text:str, separateur=' ')->str:
+        #return  [a.nom for a in self.parents]
         mots = text.split(separateur)
         resultat = list()
 
         for mot in mots:
-            if self.reconnais_mot(mot):
-                resultat.append(f"<reconnue>{mot}</reconnue>")
-            else:
-                resultat.append(f"<inconnu>{mot}</inconnue>")
+            resultat.append(self.reconnais_mot(mot))
         return f"Requete: \n \n{text} \n\n\n Resultat: \n \n{' '.join(resultat)}"
 
 
@@ -455,6 +502,7 @@ class Automate(QObject):
     Si l'automate est un epsilon AFN elle le transform en AFN puis la minimise et retourne l'automate minimiser
     """
     def determiniser(self):
+
         etats = [self.etat_initial]
         nouveau_vers_ancien_etat = {self.etat_initial : [self.etat_initial]}
         etats_finaux = set()
@@ -469,28 +517,44 @@ class Automate(QObject):
             if self.etat_initial in self.etats_finaux:
                 etats_finaux.add(self.etat_initial)
             for etat in etats:
+                print('Je boucle a partir de ici')
                 print(f'je verifie {etat} => {nouveau_vers_ancien_etat[etat]}')
                 if etat in etats_verifier:
                     continue
                 for symbol in self.alphabet.list:
                     etats_destination = list()
                     for ancien_etat in nouveau_vers_ancien_etat[etat]:
+
                         etats_destination.extend(self.__etats_destination(ancien_etat,symbol))
                     print(f'etat destination {etats_destination}')
                     if etats_destination:
-                        nouvelle_destination = Etat(''.join([str(x) for x in etats_destination]))
-                        etats.append(nouvelle_destination)
-                        nouveau_vers_ancien_etat[nouvelle_destination] = list(set(etats_destination))
-                        if set(etats_destination).intersection(self.etats_finaux):
-                            etats_finaux.add(nouvelle_destination)
+                        should_add = True
+                        for i in nouveau_vers_ancien_etat:
+                            if set(etats_destination) == set(nouveau_vers_ancien_etat[i]):
+                                should_add = False
+                                nouvelle_destination = i
+                            if not should_add:
+                                break
+
+
+                        #nouvelle_destination = Etat(','.join([str(x) for x in etats_destination]))
+                        if should_add:
+                            nouvelle_destination = Etat('{' + ','.join([str(x) for x in etats_destination]) + '}')
+                            #nouvelle_destination = Automate.genere_etat()
+                            etats.append(nouvelle_destination)
+                            nouveau_vers_ancien_etat[nouvelle_destination] = list(set(etats_destination))
+                            if set(etats_destination).intersection(self.etats_finaux):
+                                etats_finaux.add(nouvelle_destination)
+                                #etats_verifier.add(nouvelle_destination)
 
 
 
                         nouvelle_transition = Transition(etat, symbol, nouvelle_destination)
                         transitions.add(nouvelle_transition)
                 etats_verifier.add(etat)
-
-            return Automate(self.__alphabet, etats_verifier, self.etat_initial, etats_finaux, list(transitions))
+            resultat = Automate(self.__alphabet, etats_verifier, self.etat_initial, etats_finaux, list(transitions))
+            resultat.parents =self.parents
+            return resultat
 
         else:
             return self.convertir_en_nfa().determiniser()
@@ -526,7 +590,9 @@ class Automate(QObject):
                 for destination in set(destination_resultat):
                     nouvelle_transition = Transition(etat,symbole,destination)
                     transition.append(nouvelle_transition)
-        return Automate(self.alphabet, self.etats, self.etat_initial, etat_finaux, transition)
+        resultat = Automate(self.alphabet, self.etats, self.etat_initial, etat_finaux, transition)
+        resultat.parents = self.parents
+        return resultat
 
     """
     Determine si l'automate est complet
@@ -547,6 +613,8 @@ class Automate(QObject):
     Si l'automate n'est pas AFD il le converti et retourne l'automate complet
     """
     def completer(self):
+        if self.est_complet:
+            return self
         if self.type != Type.AFD:
             return self.determiniser().completer()
 
@@ -560,13 +628,15 @@ class Automate(QObject):
                 if not self.__etats_destination(etat, symbole):
                     self.transitions.add(Transition(etat, symbole, puit))
 
-        return Automate(self.alphabet, etats, self.etat_initial, self.etats_finaux, transitions)
-
+        resultat = Automate(self.alphabet, self.etats, self.etat_initial, etat_finaux, transition)
+        resultat.parents = self.parents
+        return resultat
     """
     Cette fonction copie les propriete de l'automate en parameter sur l'automate actuelle
     """
 
     def copie_automate(self, autre):
+        print(f"letat initial de lautre {autre.etat_initial}")
         if isinstance(autre, Automate):
             self.__alphabet = autre.alphabet
             self.__etats = autre.etats
@@ -574,6 +644,7 @@ class Automate(QObject):
             self.__etat_finaux = autre.etats_finaux
             self.__transitions = autre.transitions
             self.nom = autre.nom
+            self.parents = autre.parents
             self.automate_modifier.emit()
         else:
             raise TypeError('Type Automate attendu ')
@@ -675,13 +746,15 @@ class Automate(QObject):
                             if result_state in nouveau_vers_ancien_etat[i]:
                                 trans = Transition(state, _on, i)
                                 new_transitions.add(trans)
-
-        return Automate(self.alphabet, new_states, new_initial_state, new_final_states, list(new_transitions))
+        resultat = Automate(self.alphabet, new_states, new_initial_state, new_final_states, list(new_transitions))
+        resultat.parents = self.parents
+        return resultat
 
 
     def union_automate(self, automate):
         automate_1 = self.completer()
         if isinstance(automate, Automate):
+            #automate.visualiser()
             automate_2 = automate.completer()
             new_alphabet = set()
             for i in automate_1.alphabet.list:
@@ -689,15 +762,26 @@ class Automate(QObject):
             for i in automate_2.alphabet.list:
                 new_alphabet.add(i)
 
+            for etat in automate_1.etats_finaux:
+                if not etat.nom:
+                    etat.definir_nom(automate_1.nom)
+
+            for etat in automate_2.etats_finaux:
+                if not etat.nom:
+                    etat.definir_nom(automate_2.nom)
+
             new_alphabet = Alphabet(new_alphabet)
             new_transition = automate_1.transitions.union(automate_2.transitions)
             new_etat = automate_1.etats.union(automate_2.etats)
             new_etat.add(Etat('start'))
+            print(f"Etat automate {automate_1.etat_initial}  {automate_2.etat_initial}")
             new_transition.add(Transition(Etat('start'), '', automate_1.etat_initial))
             new_transition.add(Transition(Etat('start'), '', automate_2.etat_initial))
             new_finaux = automate_1.etats_finaux.union(automate_2.etats_finaux)
+            resultat = Automate(new_alphabet, new_etat, Etat('start'), new_finaux, new_transition).determiniser().minimiser()
 
-            return Automate(new_alphabet, new_etat, Etat('start'), new_finaux, new_transition)
+            resultat.parents = [*automate_1.parents, *automate_2.parents, automate_1, automate_2]
+            return resultat
     '''
     Determine le type de l'automate
     

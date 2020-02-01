@@ -19,18 +19,32 @@ class CreationView(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(115, 125)
+
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.groupBox = QtWidgets.QGroupBox(Form)
-        self.groupBox.setObjectName("groupBox")
+        self.groupBox = QtWidgets.QScrollArea(Form)
+        self.groupBox.setWidgetResizable(True)
+        self.groupBox.setObjectName("scrollArea")
+
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 360, 374))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_3.setObjectName("verticalLayout_2")
+
+        #self.groupBox = QtWidgets.QGroupBox(Form)
+        #self.groupBox.setObjectName("groupBox")
         self.createBtn= AutomataSelectWindow(self.automate, self.list)
 
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.groupBox)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
+
         self.verticalLayout_3.addWidget(AddAlphabetWindow(self.automate))
         self.verticalLayout_3.addWidget(AddEtatWindow(self.automate))
         self.verticalLayout_3.addWidget(AddTransitionWindow(self.automate))
         self.verticalLayout_3.addWidget(self.createBtn)
+        #self.verticalLayout_2.addWidget(self.groupBox)
+
+        self.groupBox.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout_2.addWidget(self.groupBox)
 
         self.retranslateUi(Form)
@@ -39,7 +53,7 @@ class CreationView(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Creation"))
-        self.groupBox.setTitle(_translate("Form", "Creation"))
+        #self.groupBox.setTitle(_translate("Form", "Creation"))
         #self.createBtn.setText(_translate("GroupBox", "Creer l'automate"))
 
 
