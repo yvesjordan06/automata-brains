@@ -751,12 +751,24 @@ class Automate(QObject):
         resultat.parents = self.parents
         return resultat
 
+    @staticmethod
+    def a_partir_de(automate):
+        resultat = Automate(Alphabet(automate.alphabet.list), list(automate.etats), Etat(str(automate.etat_initial)), list(automate.etats_finaux), list(automate.transitions))
+        resultat.definir_nom(automate.nom)
+        resultat.parents = [*resultat.parents]
+        return resultat
 
     def union_automate(self, automate):
         automate_1 = self.completer()
+
         if isinstance(automate, Automate):
-            #automate.visualiser()
+            automate_2 = Automate.a_partir_de(automate)
+
+            for etat in automate_2.etats:
+                if etat in self.etats:
+                    automate_2.remplacer_etat(etat, Automate.genere_etat())
             automate_2 = automate.completer()
+
             new_alphabet = set()
             for i in automate_1.alphabet.list:
                 new_alphabet.add(i)
