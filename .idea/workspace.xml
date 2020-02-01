@@ -1,154 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Automate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Automate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate11:32:26.475219" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate11:32:26.475219.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate11:33:07.856082" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate11:33:07.856082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate11:34:34.460809" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate11:34:34.460809.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate12:39:48.938544" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate12:39:48.938544.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate12:40:25.213270" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate12:40:25.213270.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate13:02:20.246479" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate13:02:20.246479.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate13:03:12.928725" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate13:03:12.928725.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:43:28.299194" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:43:28.299194.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:44:13.633700" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:44:13.633700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:44:46.143363" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:44:46.143363.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:44:46.181473" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:44:46.181473.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:47:27.578627" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:47:27.578627.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:47:27.625748" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:47:27.625748.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:47:47.778176" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:47:47.778176.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:48:25.238645" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:48:25.238645.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:48:46.637408" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:48:46.637408.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:49:39.629316" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:49:39.629316.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:49:39.664397" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:49:39.664397.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:51:24.200609" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:51:24.200609.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:51:24.247030" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:51:24.247030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:51:24.297517" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate15:51:24.297517.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:03:23.687181" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:03:23.687181.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:03:57.775797" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:03:57.775797.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:03:57.825985" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:03:57.825985.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:28:04.337272" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:28:04.337272.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:28:26.740368" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate16:28:26.740368.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:28:52.850183" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:28:52.850183.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:28:53.038289" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:28:53.038289.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:30:34.825159" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:30:34.825159.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:58:48.756671" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:58:48.756671.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:33.492978" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:33.492978.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:33.557758" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:33.557758.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:52.759647" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:52.759647.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:52.805926" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate19:59:52.805926.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:29:38.511097" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:29:38.511097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:30:56.070224" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:30:56.070224.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:30:56.112456" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:30:56.112456.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:32:22.315776" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:32:22.315776.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:32:22.363827" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:32:22.363827.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:33:00.023304" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:33:00.023304.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:33:00.071199" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:33:00.071199.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:02.152153" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:02.152153.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:02.213676" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:02.213676.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:36.706447" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:36.706447.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:36.747606" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:34:36.747606.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:47:29.132714" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:47:29.132714.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:47:29.177907" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:47:29.177907.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:47:29.256890" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:47:29.256890.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:50:37.094767" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:50:37.094767.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:50:37.139951" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:50:37.139951.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:50:37.222258" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:50:37.222258.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:53:31.800997" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:53:31.800997.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:53:31.840728" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:53:31.840728.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:53:31.915003" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:53:31.915003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:57:58.948206" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:57:58.948206.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:57:59.000158" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:57:59.000158.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:57:59.078485" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate20:57:59.078485.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate21:35:56.229853" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate21:35:56.229853.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate21:35:56.282748" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate21:35:56.282748.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate21:35:56.357499" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate21:35:56.357499.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:20:30.017072" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:20:30.017072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:20:30.057615" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:20:30.057615.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:20:30.138171" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:20:30.138171.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:08.032713" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:08.032713.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:08.092339" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:08.092339.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:08.156930" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:08.156930.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.134481" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.134481.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.179000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.179000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.238787" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.238787.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.355196" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/automate22:26:22.355196.png" beforeDir="false" />
-    </list>
-    <ignored path="diagrams/" />
-    <ignored path=".idea/vcs.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="UI Modification&#10;Tool Button Binding&#10;Selecting and reading from files&#10;New automata creation&#10;Multiple Automata handle and switch" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,135 +9,29 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/automata_brain$transition.coverage" NAME="transition Coverage Results" MODIFIED="1580202230343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/automata_brain$ui_transition__1_.coverage" NAME="ui-transition (1) Coverage Results" MODIFIED="1580202281476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Alphabet_test_EtatTestCase.coverage" NAME="Unittests for Alphabet_test.EtatTestCase Coverage Results" MODIFIED="1580300488256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Transition_test_AlphabetTestCase.coverage" NAME="Unittests for Transition_test.AlphabetTestCase Coverage Results" MODIFIED="1580300803918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
-    <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Etat_test_EtatTestCase.coverage" NAME="Unittests for Etat_test.EtatTestCase Coverage Results" MODIFIED="1580300224144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
-    <SUITE FILE_PATH="coverage/automata_brain$creation.coverage" NAME="creation Coverage Results" MODIFIED="1580332965011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
-    <SUITE FILE_PATH="coverage/automata_brains$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580576278624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
-    <SUITE FILE_PATH="coverage/automata_brain$main.coverage" NAME="main Coverage Results" MODIFIED="1580256504788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/automata_brain$etatView.coverage" NAME="etatView Coverage Results" MODIFIED="1580253725045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
-    <SUITE FILE_PATH="coverage/automata_brain$etat.coverage" NAME="etat Coverage Results" MODIFIED="1580140974927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/automata_brain$alphabetUI.coverage" NAME="alphabetUI Coverage Results" MODIFIED="1580206502923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
-    <SUITE FILE_PATH="coverage/automata_brains$automataSelect.coverage" NAME="automataSelect Coverage Results" MODIFIED="1580433357504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
-    <SUITE FILE_PATH="coverage/automata_brains$RegExp__1_.coverage" NAME="RegExp (1) Coverage Results" MODIFIED="1580569860389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models" />
-    <SUITE FILE_PATH="coverage/automata_brain$ui_creation.coverage" NAME="ui-creation Coverage Results" MODIFIED="1580327559237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/automata_brain$helloView.coverage" NAME="helloView Coverage Results" MODIFIED="1580327585692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/automata_brain$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580385780662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
-    <SUITE FILE_PATH="coverage/automata_brain$nomView.coverage" NAME="nomView Coverage Results" MODIFIED="1580207168925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
-    <SUITE FILE_PATH="coverage/automata_brain$ui_transition__1_.coverage" NAME="ui-transition (1) Coverage Results" MODIFIED="1580202281476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brains$Prefix.coverage" NAME="Prefix Coverage Results" MODIFIED="1580471992980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models" />
-    <SUITE FILE_PATH="coverage/automata_brains$main.coverage" NAME="main Coverage Results" MODIFIED="1580573780893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Etat_test_EtatTestCase.coverage" NAME="Unittests for Etat_test.EtatTestCase Coverage Results" MODIFIED="1580300224144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Transition_test_AlphabetTestCase_test_epsilon.coverage" NAME="Unittests for Transition_test.AlphabetTestCase.test_epsilon Coverage Results" MODIFIED="1580300940294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
+    <SUITE FILE_PATH="coverage/automata_brain$creation.coverage" NAME="creation Coverage Results" MODIFIED="1580332965011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
+    <SUITE FILE_PATH="coverage/automata_brains$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580506432385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
+    <SUITE FILE_PATH="coverage/automata_brain$main.coverage" NAME="main Coverage Results" MODIFIED="1580256504788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brain$ui_transition.coverage" NAME="ui-transition Coverage Results" MODIFIED="1580163182308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brain$alphabetView.coverage" NAME="alphabetView Coverage Results" MODIFIED="1580206875337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
     <SUITE FILE_PATH="coverage/automata_brain$typeView.coverage" NAME="typeView Coverage Results" MODIFIED="1580207183976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
+    <SUITE FILE_PATH="coverage/automata_brain$etatView.coverage" NAME="etatView Coverage Results" MODIFIED="1580253725045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
     <SUITE FILE_PATH="coverage/automata_brain$see.coverage" NAME="see Coverage Results" MODIFIED="1580256488120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
     <SUITE FILE_PATH="coverage/automata_brain$Automate.coverage" NAME="Automate Coverage Results" MODIFIED="1580409033845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models" />
-    <SUITE FILE_PATH="coverage/automata_brains$RegExp.coverage" NAME="RegExp Coverage Results" MODIFIED="1580508300688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/automata_brain$etat.coverage" NAME="etat Coverage Results" MODIFIED="1580140974927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/automata_brain$alphabetUI.coverage" NAME="alphabetUI Coverage Results" MODIFIED="1580206502923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
+    <SUITE FILE_PATH="coverage/automata_brains$automataSelect.coverage" NAME="automataSelect Coverage Results" MODIFIED="1580433357504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
+    <SUITE FILE_PATH="coverage/automata_brain$ui_creation.coverage" NAME="ui-creation Coverage Results" MODIFIED="1580327559237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/automata_brain$helloView.coverage" NAME="helloView Coverage Results" MODIFIED="1580327585692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/automata_brain$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580385780662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
     <SUITE FILE_PATH="coverage/automata_brains$imageViewer.coverage" NAME="imageViewer Coverage Results" MODIFIED="1580504871802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Models/Automate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="413" column="47" selection-start-line="413" selection-start-column="47" selection-end-line="413" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/RegExp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3090">
-              <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../scroll.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" column="54" selection-start-line="68" selection-start-column="8" selection-end-line="69" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Creation/creation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Creation/makeView.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Creation/automataSelect.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding>
-                <element signature="e#207#249#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="432" column="49" selection-start-line="432" selection-start-column="49" selection-end-line="432" selection-end-column="49" />
-              <folding>
-                <element signature="e#197#239#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/Etat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/imageViewer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <SUITE FILE_PATH="coverage/automata_brain$nomView.coverage" NAME="nomView Coverage Results" MODIFIED="1580207168925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -296,130 +43,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>automata</find>
-      <find>ite</find>
-      <find>comp</find>
-      <find>reconn</find>
-      <find>cop</find>
-      <find>un</find>
-      <find>reconnaitre</find>
-      <find>reconnait</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/ui_mainwindow.py" />
-        <option value="$PROJECT_DIR$/etat.py" />
-        <option value="$PROJECT_DIR$/ui-transition.py" />
-        <option value="$PROJECT_DIR$/Views/ui-transition.py" />
-        <option value="$PROJECT_DIR$/helloView.py" />
-        <option value="$PROJECT_DIR$/Views/addTransition.py" />
-        <option value="$PROJECT_DIR$/Views/makeView.py" />
-        <option value="$PROJECT_DIR$/ui-creation.py" />
-        <option value="$PROJECT_DIR$/Views/creation.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/nomView.py" />
-        <option value="$PROJECT_DIR$/Models/__init__.py" />
-        <option value="$PROJECT_DIR$/Models/Transition.py" />
-        <option value="$PROJECT_DIR$/Models/Tests/Etat.test.py" />
-        <option value="$PROJECT_DIR$/Models/Tests/Etat_test.py" />
-        <option value="$PROJECT_DIR$/Models/Tests/Alphabet_test.py" />
-        <option value="$PROJECT_DIR$/Models/Tests/Transition_test.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/alphabet.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/reconnaissance.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/alphabetView.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/alphabetUI.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/etatView.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/transitionAddUI.py" />
-        <option value="$PROJECT_DIR$/Models/Alphabet.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/etatUI.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Views/views.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/automataSelect.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/makeView.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/see.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/bigReconnaisance.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/transitionView.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/central.py" />
-        <option value="$PROJECT_DIR$/Models/Prefix.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/imageViewer.py" />
-        <option value="$PROJECT_DIR$/Models/Etat.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/creation.py" />
-        <option value="$PROJECT_DIR$/Models/RegExp.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/makeView.py" />
-        <option value="$PROJECT_DIR$/Views/main.py" />
-        <option value="$PROJECT_DIR$/Models/Automate.py" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="202" />
-    <option name="width" value="673" />
-    <option name="height" value="576" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="diagrams" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="Affichage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="Creation" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <option name="width" value="640" />
+    <option name="height" value="1024" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../scroll.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/diagrams" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -434,18 +69,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Views/Affichage" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.main (1)">
     <configuration name="Automate" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -470,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RegExp (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Prefix" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="automata-brain" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -483,16 +106,16 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/RegExp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/Prefix.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RegExp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="automataSelect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="automata-brain" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -500,12 +123,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Views/Creation" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../RegExp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Views/Creation/automataSelect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -584,17 +207,17 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.Automate" />
+      <item itemvalue="Python.automataSelect" />
       <item itemvalue="Python.imageViewer" />
-      <item itemvalue="Python.RegExp" />
-      <item itemvalue="Python.RegExp (1)" />
+      <item itemvalue="Python.Prefix" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.RegExp (1)" />
         <item itemvalue="Python.Automate" />
-        <item itemvalue="Python.RegExp" />
         <item itemvalue="Python.imageViewer" />
+        <item itemvalue="Python.Prefix" />
+        <item itemvalue="Python.automataSelect" />
       </list>
     </recent_temporary>
   </component>
@@ -617,9 +240,7 @@
       <workItem from="1580366999170" duration="20600000" />
       <workItem from="1580408452730" duration="11628000" />
       <workItem from="1580424870687" duration="29194000" />
-      <workItem from="1580496220555" duration="21481000" />
-      <workItem from="1580550499620" duration="22809000" />
-      <workItem from="1580576025207" duration="241000" />
+      <workItem from="1580496220555" duration="10762000" />
     </task>
     <task id="LOCAL-00001" summary="Minor bug fixes">
       <created>1580429146580</created>
@@ -649,28 +270,7 @@
       <option name="project" value="LOCAL" />
       <updated>1580506024667</updated>
     </task>
-    <task id="LOCAL-00005" summary="Automated Visualiser and fixed complementer">
-      <created>1580507050855</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1580507050855</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Automated Visualiser et Regexp">
-      <created>1580550759331</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1580550759331</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Reconnaissance lexicale">
-      <created>1580573400806</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1580573400806</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -703,7 +303,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157387000" />
+    <option name="totallyTimeSpent" value="123618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -714,107 +314,37 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3159091" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32882884" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46835443" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39873418" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32753164" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32911393" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3277027" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.39240506" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32954547" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15227273" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329653" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329653" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.329653" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.329653" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minor bug fixes" />
     <MESSAGE value="UI Modification&#10;Tool Button Binding&#10;Selecting and reading from files&#10;New automata creation&#10;Multiple Automata handle and switch" />
     <MESSAGE value="Updated Visualisation ui" />
     <MESSAGE value="Updated Minimize and analysis" />
-    <MESSAGE value="Automated Visualiser and fixed complementer" />
-    <MESSAGE value="Automated Visualiser et Regexp" />
-    <MESSAGE value="Reconnaissance lexicale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reconnaissance lexicale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Minimize and analysis" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="292" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580576578076">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state x="292" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/68.27.1532.873@68.27.1532.873" timestamp="1580576578076" />
+    <state width="1509" height="219" key="GridCell.Tab.0.bottom" timestamp="1580580182137">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state width="1509" height="219" key="GridCell.Tab.0.bottom/68.27.1532.873@68.27.1532.873" timestamp="1580580182137" />
+    <state width="1509" height="219" key="GridCell.Tab.0.center" timestamp="1580580182136">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state width="1509" height="219" key="GridCell.Tab.0.center/68.27.1532.873@68.27.1532.873" timestamp="1580580182136" />
+    <state width="1509" height="219" key="GridCell.Tab.0.left" timestamp="1580580182135">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state width="1509" height="219" key="GridCell.Tab.0.left/68.27.1532.873@68.27.1532.873" timestamp="1580580182135" />
+    <state width="1509" height="219" key="GridCell.Tab.0.right" timestamp="1580580182136">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state width="1509" height="219" key="GridCell.Tab.0.right/68.27.1532.873@68.27.1532.873" timestamp="1580580182136" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -826,322 +356,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mainwindow.ui.autosave" />
-    <entry file="file://$PROJECT_DIR$/alphabet.ui.qml" />
-    <entry file="file://$PROJECT_DIR$/alphabet.py" />
-    <entry file="file://$PROJECT_DIR$/etat.py" />
-    <entry file="file://$PROJECT_DIR$/ui_mainwindow.py" />
-    <entry file="file://$PROJECT_DIR$/Views/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1247971762/PyQt5/QtWidgets/QWidget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9645">
-          <caret line="644" column="8" selection-start-line="644" selection-start-column="8" selection-end-line="644" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transition.py" />
-    <entry file="file://$PROJECT_DIR$/Views/addTransition.py" />
-    <entry file="file://$PROJECT_DIR$/Views/ui-transition.py" />
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/nomView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" selection-start-line="47" selection-start-column="19" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/typeView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Tests/Alphabet_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/alphabet.py" />
-    <entry file="file://$PROJECT_DIR$/ui-creation.py" />
-    <entry file="file://$PROJECT_DIR$/helloView.py" />
-    <entry file="file://$PROJECT_DIR$/Models/Tests/Etat_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Tests/Transition_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/alphabetView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-          <folding>
-            <element signature="e#205#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/alphabetUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <folding>
-            <element signature="e#201#243#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Alphabet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-450">
-            <caret column="1" selection-start-column="1" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/transitionAddUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-621">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding>
-            <element signature="e#203#245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/etatUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#197#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/see.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/makeView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/etatView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="104" column="39" lean-forward="true" selection-start-line="90" selection-start-column="11" selection-end-line="104" selection-end-column="39" />
-          <folding>
-            <element signature="e#202#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/transitionView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-          <folding>
-            <element signature="e#207#249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/reconnaissance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-274">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/bigReconnaisance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/central.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-          <folding>
-            <element signature="e#200#242#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../RegExp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Prefix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="57" selection-start-line="88" selection-start-column="4" selection-end-line="96" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Transition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1247971762/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="4426" column="8" selection-start-line="4426" selection-start-column="8" selection-end-line="4426" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/RegExp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3090">
-          <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../scroll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="54" selection-start-line="68" selection-start-column="8" selection-end-line="69" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/creation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/makeView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/automataSelect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#207#249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Etat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/imageViewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="432" column="49" selection-start-line="432" selection-start-column="49" selection-end-line="432" selection-end-column="49" />
-          <folding>
-            <element signature="e#197#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Automate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="413" column="47" selection-start-line="413" selection-start-column="47" selection-end-line="413" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

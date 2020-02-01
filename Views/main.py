@@ -363,6 +363,11 @@ class Ui_MainWindow(object):
         self.newToolButton.clicked.connect(lambda: self.newDialog())
         self.openToolButton.clicked.connect(lambda: self.showDialog())
         self.unionToolButton.clicked.connect(lambda: self.showUnionDialog())
+        self.actionNouveau.triggered.connect(self.newDialog)
+        self.actionDeterminiser.triggered.connect(lambda: self.automate.copie_automate(self.automate.determiniser()))
+        self.actionCompleter.triggered.connect(lambda: self.automate.copie_automate(self.automate.completer()))
+        self.actionMinimiser.triggered.connect(self.minimizer)
+        self.actionOuvrir.triggered.connect(lambda: self.showDialog())
 
     def visualiser(self):
         self.automate.image.emit(self.automate.visualiser())

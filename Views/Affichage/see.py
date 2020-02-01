@@ -55,7 +55,7 @@ class Ui_Form(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.etats)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.horizontalLayout.addWidget(self.etats)
-        self.reconnaitre = ReconnaissanceWindow()
+        self.reconnaitre = ReconnaissanceWindow(self.automate)
 
         self.reconnaitre.setObjectName("reconnaitre")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.reconnaitre)

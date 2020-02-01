@@ -9,8 +9,13 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+from Models.Automate import Automate
+
 
 class Ui_Form(object):
+    def __init__(self, automate:Automate):
+        self.automate = automate
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(221, 290)
@@ -63,7 +68,12 @@ class Ui_Form(object):
         self.lineReconnaisance.textChanged['QString'].connect(self.resultatReconnaisance.clear)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        #Binding
+
+        self.pushButton.clicked.connect(lambda: self.showDialog())
+
     def retranslateUi(self, Form):
+        self.window = Form
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.groupBox.setTitle(_translate("Form", "Reconnaisance"))
@@ -75,6 +85,19 @@ class Ui_Form(object):
         self.pushButton.setStatusTip(_translate("Form", "Importer un fichier"))
         self.pushButton.setText(_translate("Form", "Ouvrir"))
 
+    def showDialog(self):
+        fname = QtWidgets.QFileDialog.getOpenFileName(self.window, filter='*.txt',
+                                                      caption='Selectionnez un fichier a analyser')
+
+        if fname[0]:
+            f = open(fname[0], 'r')
+
+            with f:
+                data = f.read()
+                text = ' '.join(data.split('\n'))
+                result = self.automate.reconnais_text(text)
+                print(f'Voici le resultat {result}')
+                self.automate.reconnaissance.emit(result)
 
 if __name__ == "__main__":
     import sys
