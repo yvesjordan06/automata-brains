@@ -411,7 +411,7 @@ class Automate(QObject):
                     if destinations:
                         suivant = destinations
                     else:
-                        return False
+                        return f"<unk : {mot}>"
             print('ici')
             print(self.etats_finaux.intersection(suivant))
             if set(suivant).intersection(self.etats_finaux):

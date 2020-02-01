@@ -430,6 +430,7 @@ class Ui_MainWindow(object):
                 data = f.read()
                 text = ' '.join(data.split('\n'))
                 result = self.automate.reconnais_text(text)
+                print(f'Voici le resultat {result}')
                 self.automate.reconnaissance.emit(result)
 
     def showUnionDialog(self):
