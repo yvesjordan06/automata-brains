@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="">
+    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="Fixed Union Front end bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Automate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Automate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main.py" afterDir="false" />
     </list>
     <ignored path="diagrams/" />
     <ignored path=".idea/vcs.xml" />
@@ -20,7 +18,7 @@
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Transition_test_AlphabetTestCase.coverage" NAME="Unittests for Transition_test.AlphabetTestCase Coverage Results" MODIFIED="1580300803918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Etat_test_EtatTestCase.coverage" NAME="Unittests for Etat_test.EtatTestCase Coverage Results" MODIFIED="1580300224144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$creation.coverage" NAME="creation Coverage Results" MODIFIED="1580332965011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
-    <SUITE FILE_PATH="coverage/automata_brains$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580585927136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
+    <SUITE FILE_PATH="coverage/automata_brains$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580587594010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
     <SUITE FILE_PATH="coverage/automata_brain$main.coverage" NAME="main Coverage Results" MODIFIED="1580256504788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automata_brain$etatView.coverage" NAME="etatView Coverage Results" MODIFIED="1580253725045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Affichage" />
     <SUITE FILE_PATH="coverage/automata_brain$etat.coverage" NAME="etat Coverage Results" MODIFIED="1580140974927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -45,7 +43,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Automate.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="93">
@@ -99,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/Creation/automataSelect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1230">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="108">
+              <caret line="217" column="40" lean-forward="true" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
               <folding>
                 <element signature="e#207#249#0" expanded="true" />
               </folding>
@@ -198,7 +196,6 @@
         <option value="$PROJECT_DIR$/Views/Creation/etatUI.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Views/views.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/automataSelect.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/makeView.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/see.py" />
         <option value="$PROJECT_DIR$/Views/Affichage/bigReconnaisance.py" />
@@ -212,6 +209,7 @@
         <option value="$PROJECT_DIR$/Views/Creation/makeView.py" />
         <option value="$PROJECT_DIR$/Models/Automate.py" />
         <option value="$PROJECT_DIR$/Views/main.py" />
+        <option value="$PROJECT_DIR$/Views/Creation/automataSelect.py" />
       </list>
     </option>
   </component>
@@ -477,7 +475,7 @@
       <workItem from="1580496220555" duration="21481000" />
       <workItem from="1580550499620" duration="22809000" />
       <workItem from="1580576025207" duration="566000" />
-      <workItem from="1580576656835" duration="7196000" />
+      <workItem from="1580576656835" duration="8017000" />
     </task>
     <task id="LOCAL-00001" summary="Minor bug fixes">
       <created>1580429146580</created>
@@ -535,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580576351920</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed Union Front end bug">
+      <created>1580587221718</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580587221718</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -568,7 +573,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164908000" />
+    <option name="totallyTimeSpent" value="165729000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -594,7 +599,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32753164" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3280757" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32753164" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32753164" />
@@ -681,7 +686,8 @@
     <MESSAGE value="Automated Visualiser et Regexp" />
     <MESSAGE value="Reconnaissance lexicale" />
     <MESSAGE value="minor fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor fix" />
+    <MESSAGE value="Fixed Union Front end bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Union Front end bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -980,12 +986,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/automataSelect.py">
+    <entry file="file://$PROJECT_DIR$/Models/Automate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1230">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="93">
+          <caret line="637" column="8" selection-start-line="637" selection-start-column="8" selection-end-line="637" selection-end-column="8" />
           <folding>
-            <element signature="e#207#249#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,12 +1006,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Automate.py">
+    <entry file="file://$PROJECT_DIR$/Views/Creation/automataSelect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="637" column="8" selection-start-line="637" selection-start-column="8" selection-end-line="637" selection-end-column="8" />
+        <state relative-caret-position="108">
+          <caret line="217" column="40" lean-forward="true" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#207#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
