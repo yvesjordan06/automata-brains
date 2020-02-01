@@ -19,6 +19,7 @@ from Models.Alphabet import Alphabet
 class Ui_MainWindow(object):
     def __init__(self, automate:Automate):
         self.automate = automate
+        self.automate.automate_modifier.connect(self.view_diff)
         self.liste_automate = dict()
 
 
@@ -443,8 +444,14 @@ class Ui_MainWindow(object):
         if ok and item:
             print(f"item {item}")
             print(type(self.liste_automate[item]))
-            self.automate.union_automate(self.liste_automate[item])
+            resultat = self.automate.union_automate(self.liste_automate[item])
+            resultat.definir_nom(self.automate.nom + ' U '+self.liste_automate[item].nom)
+            print(f'parents {resultat.parents} Nom {[a.nom for a in resultat.parents]}')
+            self.liste_automate[resultat.nom] = resultat
+            self.automate.copie_automate(resultat)
+            self.creation.ui.createBtn.setState()
     def newDialog(self):
+
         text, ok = QtWidgets.QInputDialog.getText(self.window,'Nouvel Automate','Entrez le nom')
 
         if ok:
@@ -456,7 +463,14 @@ class Ui_MainWindow(object):
                 self.liste_automate[text+'(1)'] = a
             self.creation.ui.createBtn.setState()
             self.automate.copie_automate(a)
-
+    def view_diff(self):
+        nom = self.automate.nom
+        print(f'Nom actuel {nom}')
+        for x in self.liste_automate:
+            print(f"Nom {x}")
+            if x == nom :
+                self.liste_automate[x].copie_automate(self.automate)
+        print([self.liste_automate[a].etat_initial for a in self.liste_automate])
 
 alphabet = Alphabet(['1', '2', '3'])
 a = Etat('a')

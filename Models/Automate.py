@@ -628,7 +628,7 @@ class Automate(QObject):
                 if not self.__etats_destination(etat, symbole):
                     self.transitions.add(Transition(etat, symbole, puit))
 
-        resultat = Automate(self.alphabet, self.etats, self.etat_initial, etat_finaux, transition)
+        resultat = Automate(self.alphabet, self.etats, self.etat_initial, self.etats_finaux, transitions)
         resultat.parents = self.parents
         return resultat
     """
@@ -664,6 +664,7 @@ class Automate(QObject):
                 paire_etat.append(frozenset(pair))
 
         # Scanning pairs and marking
+        a_state_has_been_marked = False
 
         for pair in paire_etat:
             if len(pair.intersection(self.etats_finaux)) == 1:
