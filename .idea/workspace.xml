@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="git ignore diagram">
+    <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1XIK5CfOS7OuuMJAPGBUSl8is8d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -228,12 +230,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Automate" />
-      <item itemvalue="Python.Prefix" />
-      <item itemvalue="Python.RegExp" />
-      <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.Automate" />
       <item itemvalue="Python.scroll" />
+      <item itemvalue="Python.RegExp" />
+      <item itemvalue="Python.Prefix" />
     </list>
     <recent_temporary>
       <list>
@@ -324,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580594930652</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="git ignore diagram">
+      <created>1580728093173</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580728093173</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -404,35 +413,47 @@
     <MESSAGE value="Updated Visualisation ui" />
     <MESSAGE value="Updated Minimize and analysis" />
     <MESSAGE value="Merge and fixed" />
-    <MESSAGE value="git ignore diagram" />
     <MESSAGE value="J'ai ajouter le readme et je converti les nom des etat avant de completer pour l'union" />
-    <option name="LAST_COMMIT_MESSAGE" value="J'ai ajouter le readme et je converti les nom des etat avant de completer pour l'union" />
+    <MESSAGE value="git ignore diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore diagram" />
   </component>
   <component name="WindowStateProjectService">
     <state x="292" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580576578076">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
     <state x="292" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/68.27.1532.873@68.27.1532.873" timestamp="1580576578076" />
-    <state width="1509" height="216" key="GridCell.Tab.0.bottom" timestamp="1580718348321">
+    <state x="440" y="60" width="777" height="814" key="CommitChangelistDialog2" timestamp="1580729811146">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="216" key="GridCell.Tab.0.bottom/68.27.1532.873@68.27.1532.873" timestamp="1580718348321" />
-    <state width="1509" height="216" key="GridCell.Tab.0.center" timestamp="1580718348320">
+    <state x="440" y="60" width="777" height="814" key="CommitChangelistDialog2/68.27.1532.873@68.27.1532.873" timestamp="1580729811146" />
+    <state width="1509" height="216" key="GridCell.Tab.0.bottom" timestamp="1580729722090">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="216" key="GridCell.Tab.0.center/68.27.1532.873@68.27.1532.873" timestamp="1580718348320" />
-    <state width="1509" height="216" key="GridCell.Tab.0.left" timestamp="1580718348319">
+    <state width="1509" height="216" key="GridCell.Tab.0.bottom/68.27.1532.873@68.27.1532.873" timestamp="1580729722090" />
+    <state width="1509" height="216" key="GridCell.Tab.0.center" timestamp="1580729722089">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="216" key="GridCell.Tab.0.left/68.27.1532.873@68.27.1532.873" timestamp="1580718348318" />
-    <state width="1509" height="216" key="GridCell.Tab.0.right" timestamp="1580718348320">
+    <state width="1509" height="216" key="GridCell.Tab.0.center/68.27.1532.873@68.27.1532.873" timestamp="1580729722089" />
+    <state width="1509" height="216" key="GridCell.Tab.0.left" timestamp="1580729722089">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="216" key="GridCell.Tab.0.right/68.27.1532.873@68.27.1532.873" timestamp="1580718348320" />
+    <state width="1509" height="216" key="GridCell.Tab.0.left/68.27.1532.873@68.27.1532.873" timestamp="1580729722089" />
+    <state width="1509" height="216" key="GridCell.Tab.0.right" timestamp="1580729722090">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state width="1509" height="216" key="GridCell.Tab.0.right/68.27.1532.873@68.27.1532.873" timestamp="1580729722090" />
+    <state x="429" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1580729823673">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state x="429" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/68.27.1532.873@68.27.1532.873" timestamp="1580729823673" />
     <state x="490" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1580728015561">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
     <state x="490" y="291" key="com.intellij.ide.util.TipDialog/68.27.1532.873@68.27.1532.873" timestamp="1580728015561" />
+    <state x="602" y="383" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580728103909">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state x="602" y="383" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/68.27.1532.873@68.27.1532.873" timestamp="1580728103909" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,7 +465,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Views/main.py</url>
-          <line>490</line>
+          <line>495</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
