@@ -18,11 +18,12 @@ class CreationView(object):
         self.list = list
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(115, 125)
+        Form.resize(470, 368)
 
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.groupBox = QtWidgets.QScrollArea(Form)
+        self.groupBox.setMinimumWidth(270)
         self.groupBox.setWidgetResizable(True)
         self.groupBox.setObjectName("scrollArea")
 
@@ -31,7 +32,7 @@ class CreationView(object):
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
 
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
-        self.verticalLayout_3.setObjectName("verticalLayout_2")
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
 
         #self.groupBox = QtWidgets.QGroupBox(Form)
         #self.groupBox.setObjectName("groupBox")

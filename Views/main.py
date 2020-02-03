@@ -17,10 +17,10 @@ from Models.Alphabet import Alphabet
 
 
 class Ui_MainWindow(object):
-    def __init__(self, automate:Automate):
+    def __init__(self, automate:Automate, list):
         self.automate = automate
         self.automate.automate_modifier.connect(self.view_diff)
-        self.liste_automate = dict()
+        self.liste_automate = list
 
 
     def setupUi(self, MainWindow):
@@ -286,7 +286,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.creation)
 
         ##CREATION
-        self.automata = SeeAutomataView(self.automate)
+        self.automata = SeeAutomataView(self.automate, self.liste_automate)
         self.automata.setObjectName("automata")
         self.horizontalLayout.addWidget(self.automata)
         self.horizontalLayout.setStretch(1, 1)
@@ -375,7 +375,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         self.window = MainWindow
-        MainWindow.setWindowTitle(_translate("MainWindow", self.automate.nom))
+        MainWindow.setWindowTitle(_translate("MainWindow", self.automate.nom + ' - Automata Brain'))
         self.newToolButton.setToolTip(_translate("MainWindow", "Nouveau"))
         self.newToolButton.setStatusTip(_translate("MainWindow", "Creer un nouvel automate"))
         self.newToolButton.setText(_translate("MainWindow", "Nouveau"))
@@ -441,7 +441,6 @@ class Ui_MainWindow(object):
 
     def showUnionDialog(self):
         if not self.liste_automate or len(self.liste_automate) < 2:
-            self.window.setStatusTip('Aucun automate')
             return
         item, ok = QtWidgets.QInputDialog.getItem(self.window, f"Faire l'union de {self.automate.nom} avec",
                                         "Liste des automates", self.liste_automate, 0, False)
@@ -449,11 +448,11 @@ class Ui_MainWindow(object):
         if ok and item:
             print(f"item {item}")
             print(type(self.liste_automate[item]))
-            resultat = self.automate.union_automate(self.liste_automate[item])
+            resultat = self.automate.union_automate(Automate.a_partir_de(self.liste_automate[item]))
             resultat.definir_nom(self.automate.nom + ' U '+self.liste_automate[item].nom)
             print(f'parents {resultat.parents} Nom {[a.nom for a in resultat.parents]}')
-            self.liste_automate[resultat.nom] = resultat
-            self.automate.copie_automate(resultat)
+            self.liste_automate[resultat.nom] = Automate.a_partir_de(resultat)
+            self.automate.copie_automate(Automate.a_partir_de(resultat))
             self.creation.ui.createBtn.setState()
     def newDialog(self):
 
@@ -462,14 +461,18 @@ class Ui_MainWindow(object):
         if ok:
             a = Automate(Alphabet([]), [], None, [], [])
             a.definir_nom(text)
-            try:
-                self.liste_automate[text] = a
-            except:
-                self.liste_automate[text+'(1)'] = a
+
+            if text in self.liste_automate:
+                a.definir_nom(text + '(1)')
+                self.liste_automate[text + '(1)'] = Automate.a_partir_de(a)
+            else:
+                self.liste_automate[text] = Automate.a_partir_de(a)
+
             self.creation.ui.createBtn.setState()
             self.automate.copie_automate(a)
     def view_diff(self):
         nom = self.automate.nom
+        self.window.setWindowTitle(self.automate.nom + ' - Automata Brain')
         print(f'Nom actuel {nom}')
         for x in self.liste_automate:
             print(f"Nom {x}")
@@ -477,7 +480,7 @@ class Ui_MainWindow(object):
                 self.liste_automate[x].copie_automate(self.automate)
         print([self.liste_automate[a].etat_initial for a in self.liste_automate])
 
-alphabet = Alphabet(['1', '2', '3'])
+alphabet = Alphabet([])
 a = Etat('a')
 b = Etat('b')
 c = Etat('c')
@@ -485,15 +488,15 @@ t1 = Transition(a, '1', b)
 t2 = Transition(a, '1', a)
 t3 = Transition(a, '2', b)
 t4 = Transition(b, '1', b)
-automata = Automate(alphabet, [a, b, c], a, [a, c], [t1, t2, t3, t4])
+automata = Automate(alphabet, [], None, [], [])
 
-automata.definir_nom('Brains')
-
+automata.definir_nom('Sans Nom')
+liste_automate = {'Sans Nom': Automate.a_partir_de(automata)}
 def run_app(automate = automata):
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow(automata)
+    ui = Ui_MainWindow(automata, liste_automate)
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

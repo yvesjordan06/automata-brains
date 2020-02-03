@@ -15,8 +15,9 @@ from Views.Affichage.makeView import SeeEtatWindow, SeeAlphabetWindow, Reconnais
 
 
 class Ui_Form(object):
-    def __init__(self, automate:Automate):
+    def __init__(self, automate:Automate, list):
         self.automate = automate
+        self.list = list
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(470, 368)
@@ -32,16 +33,13 @@ class Ui_Form(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.transition = SeeCentralWindow(self.automate)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(1)
-        sizePolicy.setHeightForWidth(self.transition.sizePolicy().hasHeightForWidth())
-        self.transition.setSizePolicy(sizePolicy)
+
 
         self.transition.setObjectName("transition")
-        self.verticalLayout_2.addWidget(self.transition)
-
+        self.verticalLayout_2.addWidget(self.transition, 2)
+        self.bottom = QtWidgets.QFrame(self.groupBox)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
+
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.alphabet = SeeAlphabetWindow(self.automate)
 
@@ -55,14 +53,17 @@ class Ui_Form(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.etats)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.horizontalLayout.addWidget(self.etats)
-        self.reconnaitre = ReconnaissanceWindow(self.automate)
+        self.reconnaitre = ReconnaissanceWindow(self.automate, self.list)
 
         self.reconnaitre.setObjectName("reconnaitre")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.reconnaitre)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.horizontalLayout.addWidget(self.reconnaitre)
+        self.bottom.setLayout(self.horizontalLayout)
 
-        self.verticalLayout_2.addLayout(self.horizontalLayout)
+
+        self.verticalLayout_2.addWidget(self.bottom,1)
+
         self.verticalLayout.addWidget(self.groupBox)
 
         self.retranslateUi(Form)

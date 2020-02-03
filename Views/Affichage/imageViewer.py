@@ -1,8 +1,7 @@
-from PyQt5.QtCore import Qt
+
 from PyQt5.QtGui import QImage, QPixmap, QPalette, QPainter
 from PyQt5.QtPrintSupport import QPrintDialog, QPrinter
-from PyQt5.QtWidgets import QLabel, QSizePolicy, QScrollArea, QMessageBox, QMainWindow, QMenu, QAction, \
-    qApp, QFileDialog, QWidget, QHBoxLayout, QPushButton, QGroupBox, QVBoxLayout
+from PyQt5 import QtWidgets, QtCore
 
 from Models.Automate import Automate
 
@@ -10,17 +9,32 @@ from Models.Automate import Automate
 def __init__(self):
     super().__init__()
 
-class QImageViewer(QWidget):
+class QImageViewer(QtWidgets.QWidget):
     def __init__(self, test:Automate):
-
         super().__init__()
         self.test = test
         self.test.automate_modifier.connect(self.open)
-        self.image = QLabel()
+        self.image = QtWidgets.QLabel()
         self.image.setText('Hello')
-        self.lay = QVBoxLayout()
-        self.lay.addWidget(self.image)
-        self.setLayout(self.lay)
+        self.groupBox = QtWidgets.QScrollArea(self)
+        #self.groupBox.setMinimumWidth(300)
+        self.groupBox.setWidgetResizable(True)
+        self.groupBox.setObjectName("scrollArea")
+
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 360, 374))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_3.setObjectName("verticalLayout_2")
+        self.verticalLayout_3.addWidget(self.image)
+
+        self.groupBox.setWidget(self.scrollAreaWidgetContents)
+
+
+        self.lay = QtWidgets.QVBoxLayout(self)
+        self.lay.addWidget(self.groupBox)
+        #self.setLayout(self.lay)
         self.open()
     def open(self):
         path = self.test.enregistrer_image(f"{hash(self.test)}{self.test.nom}")

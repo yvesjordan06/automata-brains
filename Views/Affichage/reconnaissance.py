@@ -10,15 +10,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from Models.Automate import Automate
+from Models.RegExp import ExpressionReguliere
 
 
 class Ui_Form(object):
-    def __init__(self, automate:Automate):
+    def __init__(self, automate:Automate, list:dict):
         self.automate = automate
+        self.list = list
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(221, 290)
+
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
         self.groupBox = QtWidgets.QGroupBox(Form)
@@ -62,7 +65,7 @@ class Ui_Form(object):
         self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout_3.addWidget(self.pushButton)
-        self.verticalLayout.addWidget(self.groupBox_2)
+        #self.verticalLayout.addWidget(self.groupBox_2)
 
         self.retranslateUi(Form)
         self.lineReconnaisance.textChanged['QString'].connect(self.resultatReconnaisance.clear)
@@ -71,16 +74,17 @@ class Ui_Form(object):
         #Binding
 
         self.pushButton.clicked.connect(lambda: self.showDialog())
+        self.btnReconnaitre.clicked.connect(self.regex)
 
     def retranslateUi(self, Form):
         self.window = Form
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.groupBox.setTitle(_translate("Form", "Reconnaisance"))
-        self.resultatReconnaisance.setText(_translate("Form", "Mot Reconnue"))
-        self.btnReconnaitre.setText(_translate("Form", "Reconnaitre"))
-        self.groupBox_2.setTitle(_translate("Form", "Importer"))
-        self.label.setText(_translate("Form", "Aucun Fichier Ouvert"))
+        self.groupBox.setTitle(_translate("Form", "Expression Reguliere"))
+        self.resultatReconnaisance.setText(_translate("Form", "Entrez une expression reguliere"))
+        self.btnReconnaitre.setText(_translate("Form", "Generer"))
+        #self.groupBox_2.setTitle(_translate("Form", "Importer"))
+        self.label.setText(_translate("Form", "Importer pour l'analyse"))
         self.pushButton.setToolTip(_translate("Form", "Importer"))
         self.pushButton.setStatusTip(_translate("Form", "Importer un fichier"))
         self.pushButton.setText(_translate("Form", "Ouvrir"))
@@ -98,6 +102,20 @@ class Ui_Form(object):
                 result = self.automate.reconnais_text(text)
                 print(f'Voici le resultat {result}')
                 self.automate.reconnaissance.emit(result)
+    def regex(self):
+        text = self.lineReconnaisance.text()
+
+
+
+        if (text):
+            nom, ok = QtWidgets.QInputDialog.getText(self.window, 'Nouvel Automate', 'Entrez le nom')
+
+            if ok:
+
+                result = ExpressionReguliere(text).convertir_en_afn()
+                result.definir_nom(nom or text)
+                self.list[nom or text] = Automate.a_partir_de(result)
+                self.automate.copie_automate(Automate.a_partir_de(result))
 
 if __name__ == "__main__":
     import sys

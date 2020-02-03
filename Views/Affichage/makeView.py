@@ -49,9 +49,9 @@ class SeeAlphabetWindow(QtWidgets.QWidget):
 class ReconnaissanceWindow(QtWidgets.QWidget):
 
 
-    def __init__(self, automate):
+    def __init__(self, automate, list):
         super(ReconnaissanceWindow, self).__init__()
 
-        self.ui = ReconnaissanceUI(automate)
+        self.ui = ReconnaissanceUI(automate, list)
 
         self.ui.setupUi(self)

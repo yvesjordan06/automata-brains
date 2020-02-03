@@ -70,6 +70,12 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+
+
+        self.etatArriveBox.setMaximumWidth(60)
+        self.etatDepartBox.setMaximumWidth(60)
+        self.symbolBox.setMaximumWidth(60)
+
         # Binding
         self.epsilonCheck.clicked.connect(self.epsilon_checker)
         self.addButton.clicked.connect(self.action_create_transition)

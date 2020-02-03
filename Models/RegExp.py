@@ -12,6 +12,8 @@ class ExpressionReguliere:
         print(f"Expression {expression}")
 
     def convertir_en_afn(self):
+        parenthese = False
+        expression_entre__parenthese = str()
         symbole_vers_automate = dict()
         expression_traite = list()
 
@@ -19,20 +21,46 @@ class ExpressionReguliere:
         longeur_expression = len(self.expression)
         sauter_le_prochain_symbole = False
 
+        faire_loperation_sur_la_dernier_expression = False
         for symbole in self.expression:
+
             print(symbole)
             index_suivant += 1
             print(f"index suivant {index_suivant} total {longeur_expression}")
-            if symbole == '(':
+            if symbole == ')':
+                if parenthese:
+                    parenthese = False
+                    automate_correspondant = ExpressionReguliere(expression_entre__parenthese).convertir_en_afn()
+                    symbole_vers_automate[f'P{index_suivant - 1}'] = automate_correspondant
+                    expression_traite.append(f'P{index_suivant - 1}')
+                    faire_loperation_sur_la_dernier_expression = True
+                    expression_entre__parenthese=str()
+                else:
+                    raise ValueError(f'Parenthese fermante pas approprie au symbole {index_suivant}')
+            if parenthese:
+                expression_entre__parenthese += symbole
+            elif symbole == '(':
+                parenthese = True
+                continue
                 #TODO FAIRE CE CAS
                 pass
-            elif symbole in ['*','|',')','.']:
-                if index_suivant == 1:
-                    raise ValueError('Une Expression ne peux pas commencer par un operateur')
-                else:
-                    continue
+
+
             else:
+                if symbole in ['*', '|', '.', '+']:
+                    if index_suivant == 1:
+                        raise ValueError('Une Expression ne peux pas commencer par un operateur')
+
+                    else:
+                        if symbole == '.':
+                            expression_traite.append('.')
+                        elif symbole in ['|', '+']:
+                            expression_traite.append('+')
+
+                    continue
+
                 if sauter_le_prochain_symbole:
+                    sauter_le_prochain_symbole = False
                     continue
                 if index_suivant <= longeur_expression:
                     try:
@@ -44,34 +72,116 @@ class ExpressionReguliere:
                     operation_de_kleen = False
                     if symbole_suivant == '*':
                         operation_de_kleen = True
-                    elif symbole_suivant == '|':
+                    elif symbole_suivant in ['|','+']:
                         operation_de_addition = True
 
                     if operation_de_kleen:
-                        automate_correspondant = GenerateurAutomate.a_partir_du_symbole(symbole)
-                        automate_correspondant = GenerateurAutomate.faire_kleen(automate_correspondant)
-                        symbole_vers_automate[f'{symbole}{index_suivant-1}'] = automate_correspondant
-                        expression_traite.append(f'{symbole}{index_suivant-1}')
+                        if faire_loperation_sur_la_dernier_expression:
+                            automate_correspondant = GenerateurAutomate.faire_kleen(symbole_vers_automate[expression_traite[-1]])
+                            symbole_vers_automate[expression_traite[-1]] = automate_correspondant
+                            faire_loperation_sur_la_dernier_expression = False
+                        else:
+                            automate_correspondant = GenerateurAutomate.a_partir_du_symbole(symbole)
+                            automate_correspondant = GenerateurAutomate.faire_kleen(automate_correspondant)
+                            symbole_vers_automate[f'{symbole}{index_suivant-1}'] = automate_correspondant
+                            expression_traite.append(f'{symbole}{index_suivant-1}')
+                        expression_traite.append('.')
+                        print('Kleen a fait')
+                        print(expression_traite)
 
                     elif operation_de_addition:
-                        sauter_le_prochain_symbole = True
-                        automate1 = GenerateurAutomate.a_partir_du_symbole(symbole)
-                        automate2 = GenerateurAutomate.a_partir_du_symbole(self.expression[index_suivant+1])
-                        automate_correspondant = GenerateurAutomate.faire_union(automate1, automate2)
+                        if faire_loperation_sur_la_dernier_expression:
+                            expression_traite.append('+')
+                            faire_loperation_sur_la_dernier_expression = False
+                            continue
+                        automate_correspondant = GenerateurAutomate.a_partir_du_symbole(symbole)
                         symbole_vers_automate[f'{symbole}{index_suivant - 1}'] = automate_correspondant
+                        #automate_correspondant.visualiser()
                         expression_traite.append(f'{symbole}{index_suivant - 1}')
+                        expression_traite.append('+')
+                        print('addition a fait')
+                        print(expression_traite)
                     else:
+                        if faire_loperation_sur_la_dernier_expression:
+                            expression_traite.append('.')
+                            faire_loperation_sur_la_dernier_expression = False
+                            continue
                         automate_correspondant = GenerateurAutomate.a_partir_du_symbole(symbole)
                         symbole_vers_automate[f'{symbole}{index_suivant - 1}'] = automate_correspondant
                         expression_traite.append(f'{symbole}{index_suivant - 1}')
+                        expression_traite.append('.')
+                        print('Concat a fais')
                         print(expression_traite)
 
             taken = False
+
+        addition = False
+        concat = False
+        dernier_expression = None
+        counter = -1
+        expression_traite_normal = []
+
+        exp_precedent = None
         for expression in expression_traite:
-            if not taken:
-                resultat = symbole_vers_automate[expression]
+            if expression != exp_precedent:
+                expression_traite_normal.append(expression)
+            exp_precedent = expression
+
+        #reduction des plus
+        automate_precedent =None
+        print(f"Expression normal = {expression_traite_normal}")
+        automata_traite = []
+        dois_additioner = False
+        for expression in expression_traite_normal:
+
+            if expression == '+':
+                dois_additioner = True
+                continue
+            if expression == '.':
+                continue
+            elif dois_additioner:
+                automata_traite[-1] = GenerateurAutomate.faire_union(automata_traite[-1], symbole_vers_automate[expression])
+                dois_additioner = False
+                continue
             else:
-                resultat = GenerateurAutomate.faire_la_concatenation(resultat, symbole_vers_automate[expression])
+                automata_traite.append(Automate.a_partir_de(symbole_vers_automate[expression]))
+
+
+        #Faire la concat
+        taken = False
+        for automate in automata_traite:
+            if not taken:
+                resultat = Automate.a_partir_de(automate)
+                taken = True
+            else:
+                resultat = GenerateurAutomate.faire_la_concatenation(Automate.a_partir_de(resultat), automate)
+
+        return resultat
+
+
+        print(f"Expression normal = {expression_traite_normal}")
+        for expression in expression_traite_normal:
+            counter += 1
+            #symbole_vers_automate[expression].visualiser()
+            if expression == '.':
+                concat = True
+            elif expression == '+':
+                addition = True
+                concat = False
+            elif not taken:
+                resultat = symbole_vers_automate[expression]
+                taken=True
+                dernier_expression = Automate.a_partir_de(resultat)
+            else:
+                if concat :
+                    concat = False
+                    resultat = GenerateurAutomate.faire_la_concatenation(Automate.a_partir_de(resultat), symbole_vers_automate[expression])
+                elif addition:
+                    addition = False
+
+                    resultat = GenerateurAutomate.faire_union(Automate.a_partir_de(resultat),
+                                                                         symbole_vers_automate[expression])
+            #resultat.visualiser()
         return resultat
 
 
@@ -155,7 +265,7 @@ class GenerateurAutomate:
         final = list(automate2.etats_finaux)[-1]
 
         for etat in automate1.etats_finaux:
-            automate2.remplacer_etat(automate2.etat_initial, list(automate1.etats_finaux)[-1])
+            automate2.remplacer_etat(automate2.etat_initial, etat)
 
         nouveaux_etats = [*automate1.etats, *automate2.etats]
         nouvelle_transition = [*automate1.transitions, *automate2.transitions]
@@ -172,7 +282,7 @@ class GenerateurAutomate:
         return Etat(f'Q{GenerateurAutomate.compteur_etat}')
 
     @staticmethod
-    def setat_initial():
+    def etat_initial():
         GenerateurAutomate.compteur_etat_initial += 1
         return Etat(f'I{GenerateurAutomate.compteur_etat_initial}')
 
@@ -183,39 +293,42 @@ class GenerateurAutomate:
 
 
 if __name__ == '__main__':
-    a = Automate(Alphabet(['1']), [Etat('a'), Etat('b')], Etat('a'), [Etat('b')], [Transition(Etat('a'),'1',Etat('b'))])
-    b = Automate(Alphabet(['2']), [Etat('c'), Etat('d')], Etat('c'), [Etat('d')], [Transition(Etat('c'),'2',Etat('d'))])
+    #a = Automate(Alphabet(['1']), [Etat('a'), Etat('b')], Etat('a'), [Etat('b')], [Transition(Etat('a'),'1',Etat('b'))])
+    #b = Automate(Alphabet(['2']), [Etat('c'), Etat('d')], Etat('c'), [Etat('d')], [Transition(Etat('c'),'2',Etat('d'))])
     #a.visualiser()
     #b.visualiser()
     #a.union_automate(b).determiniser().minimiser().visualiser()
 
-    alphabet = Alphabet(['a','b'])
-    a = Etat('1')
-    b = Etat('2')
-    c = Etat('3')
-    d = Etat('4')
+    #alphabet = Alphabet(['a','b'])
+    #a = Etat('1')
+    #b = Etat('2')
+    #c = Etat('3')
+    #d = Etat('4')
 
-    t1 = Transition(a,'a',b)
-    t2 = Transition(a,'b',a)
-    t3 = Transition(b,'b',b)
-    t4 = Transition(b,'a',a)
-    t5 = Transition(c,'a',c)
-    t6 = Transition(c,'b',d)
-    t7 = Transition(d,'a',d)
-    t8 = Transition(d,'b',c)
+    #t1 = Transition(a,'a',b)
+    #t2 = Transition(a,'b',a)
+    #t3 = Transition(b,'b',b)
+    #t4 = Transition(b,'a',a)
+    #t5 = Transition(c,'a',c)
+    #t6 = Transition(c,'b',d)
+    #t7 = Transition(d,'a',d)
+    #t8 = Transition(d,'b',c)
 
-    automate1 = Automate(alphabet,[a,b], a, [a], [t1,t2,t3,t4])
-    automate1.definir_nom('pair de a')
-    automate2 = Automate(alphabet,[c,d], c, [c], [t5,t6,t7,t8])
-    automate2.definir_nom('pair de b')
+    #automate1 = Automate(alphabet,[a,b], a, [a], [t1,t2,t3,t4])
+    #automate1.definir_nom('pair de a')
+    #automate2 = Automate(alphabet,[c,d], c, [c], [t5,t6,t7,t8])
+    #automate2.definir_nom('pair de b')
     #automate1.visualiser()
     #automate2.visualiser()
 
-    automate1.union_automate(automate2).visualiser()
-    automate1.union_automate(automate2).determiniser().minimiser().visualiser()
+    #automate1.union_automate(automate2).visualiser()
+    #automate1.union_automate(automate2).determiniser().minimiser().visualiser()
     #automate1.union_automate(automate2).determiniser().visualiser()
     #automate1.union_automate(automate2).determiniser().visualiser()
     #GenerateurAutomate.faire_union(a,b).visualiser()
     #GenerateurAutomate.faire_kleen(a).visualiser()
 
-    #ExpressionReguliere('aa').convertir_en_afn().visualiser()
+     a = ExpressionReguliere('if').convertir_en_afn()
+     b = ExpressionReguliere('else').convertir_en_afn()
+
+     b.union_automate(a).visualiser()

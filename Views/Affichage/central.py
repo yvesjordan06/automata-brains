@@ -46,8 +46,10 @@ class Ui_TabWidget(object):
         self.tab = TabWidget
         TabWidget.setObjectName("TabWidget")
         TabWidget.setWindowModality(QtCore.Qt.NonModal)
-        TabWidget.resize(278, 243)
+        TabWidget.resize(278, 400)
+        TabWidget.heightForWidth(800)
         TabWidget.setStyleSheet("")
+
         TabWidget.setTabPosition(QtWidgets.QTabWidget.North)
         TabWidget.setTabShape(QtWidgets.QTabWidget.Rounded)
         TabWidget.setTabBarAutoHide(True)

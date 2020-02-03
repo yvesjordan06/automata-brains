@@ -44,34 +44,34 @@ class infix_to_prefix:
             return False
 
     def reverse(self, expr):
-        rev = ""
+        rev = []
         for i in expr:
             if i is '(':
                 i = ')'
             elif i is ')':
                 i = '('
-            rev = i + rev
+            rev = [i] + rev
         return rev
 
     def infixtoprefix(self, expr):
-        prefix = ""
+        prefix = []
         print('prefix expression after every iteration is:')
         for i in expr:
             if (len(expr) % 2 == 0):
                 print("Incorrect infix expr")
                 return False
             elif (self.is0perand(i)):
-                prefix += i
+                prefix += [i]
             elif (i in '+-*/^'):
                 while (len(self.items) and self.precedence[i] < self.precedence[self.seek()]):
-                    prefix += self.pop()
+                    prefix += [self.pop()]
                 self.push(i)
             elif i is '(':
                 self.push(i)
             elif i is ')':
                 o = self.pop()
                 while o != '(':
-                    prefix += o
+                    prefix += [o]
                     o = self.pop()
             print(prefix)
             # end of for
@@ -79,7 +79,7 @@ class infix_to_prefix:
             if (self.seek() == '('):
                 self.pop()
             else:
-                prefix += self.pop()
+                prefix += [self.pop()]
                 print(prefix)
         return prefix
 

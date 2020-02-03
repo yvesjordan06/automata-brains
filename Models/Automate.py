@@ -61,7 +61,7 @@ class Automate(QObject):
             else:
                 raise ValueError(initial, "ne se trouve pas dans self.__etats")
         elif initial is None:
-            self.__etat_initial = None
+            return None
         else:
             raise TypeError("le type non prix en charge")
 
@@ -297,7 +297,7 @@ class Automate(QObject):
         # Si vous avez installer graphviz decommentez
 
         kwargs.setdefault('filename', f'../diagrams/automate{datetime.datetime.now().time()}')
-        kwargs.setdefault('format', f'png')
+        kwargs.setdefault('format', f'svg')
 
         f = Digraph('Test', filename=kwargs['filename'], format=kwargs['format'])
         f.attr(label=f'Type: \n {self.type}')
@@ -415,7 +415,7 @@ class Automate(QObject):
             print('ici')
             print(self.etats_finaux.intersection(suivant))
             if set(suivant).intersection(self.etats_finaux):
-                text = 'reconnue'
+                text = self.nom or 'reconnue'
                 parent_reconnue = False
                 for parent in self.parents:
                     if parent.mot_est_reconnue(mot):
@@ -553,7 +553,8 @@ class Automate(QObject):
                         transitions.add(nouvelle_transition)
                 etats_verifier.add(etat)
             resultat = Automate(self.__alphabet, etats_verifier, self.etat_initial, etats_finaux, list(transitions))
-            resultat.parents =self.parents
+            resultat.parents =self.parents.copy()
+            resultat.nom = self.nom
             return resultat
 
         else:
@@ -590,8 +591,9 @@ class Automate(QObject):
                 for destination in set(destination_resultat):
                     nouvelle_transition = Transition(etat,symbole,destination)
                     transition.append(nouvelle_transition)
-        resultat = Automate(self.alphabet, self.etats, self.etat_initial, etat_finaux, transition)
-        resultat.parents = self.parents
+        resultat = Automate(Alphabet(self.alphabet.list), list(self.etats), self.etat_initial, etat_finaux, transition)
+        resultat.parents = self.parents.copy()
+        resultat.nom = self.nom
         return resultat
 
     """
@@ -619,17 +621,18 @@ class Automate(QObject):
             return self.determiniser().completer()
 
         puit = Etat("PUIS")
-        etats = self.etats
-        etats.add(puit)
-        transitions = self.transitions
+        etats = list(self.etats)
+        etats.append(puit)
+        transitions = list(self.transitions)
 
         for etat in etats:
             for symbole in self.__alphabet.list:
                 if not self.__etats_destination(etat, symbole):
-                    self.transitions.add(Transition(etat, symbole, puit))
+                    transitions.append(Transition(etat, symbole, puit))
 
-        resultat = Automate(self.alphabet, self.etats, self.etat_initial, self.etats_finaux, transitions)
-        resultat.parents = self.parents
+        resultat = Automate(Alphabet(self.alphabet.list), etats, self.etat_initial, self.etats_finaux.copy(), transitions)
+        resultat.parents = self.parents.copy()
+        resultat.nom = self.nom
         return resultat
     """
     Cette fonction copie les propriete de l'automate en parameter sur l'automate actuelle
@@ -747,15 +750,17 @@ class Automate(QObject):
                             if result_state in nouveau_vers_ancien_etat[i]:
                                 trans = Transition(state, _on, i)
                                 new_transitions.add(trans)
-        resultat = Automate(self.alphabet, new_states, new_initial_state, new_final_states, list(new_transitions))
-        resultat.parents = self.parents
+        resultat = Automate(Alphabet(self.alphabet.list), new_states, new_initial_state, new_final_states, list(new_transitions))
+        resultat.parents = self.parents.copy()
+        resultat.nom = self.nom
         return resultat
 
     @staticmethod
     def a_partir_de(automate):
-        resultat = Automate(Alphabet(automate.alphabet.list), list(automate.etats), Etat(str(automate.etat_initial)), list(automate.etats_finaux), list(automate.transitions))
+        etat = None if not automate.etat_initial else Etat(str(automate.etat_initial))
+        resultat = Automate(Alphabet(automate.alphabet.list), list(automate.etats), etat, list(automate.etats_finaux), list(automate.transitions))
         resultat.definir_nom(automate.nom)
-        resultat.parents = [*resultat.parents]
+        resultat.parents = [*automate.parents]
         return resultat
 
     def union_automate(self, automate):
@@ -794,6 +799,7 @@ class Automate(QObject):
             resultat = Automate(new_alphabet, new_etat, Etat('start'), new_finaux, new_transition).determiniser().minimiser()
 
             resultat.parents = [*automate_1.parents, *automate_2.parents, automate_1, automate_2]
+            resultat.nom = self.nom
             return resultat
     '''
     Determine le type de l'automate

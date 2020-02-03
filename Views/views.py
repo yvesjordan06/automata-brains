@@ -18,9 +18,9 @@ class CreateAutomataView(QtWidgets.QWidget):
 class SeeAutomataView(QtWidgets.QWidget):
 
 
-    def __init__(self, automate:Automate):
+    def __init__(self, automate:Automate, list):
         super(SeeAutomataView, self).__init__()
 
-        self.ui = SeeView(automate)
+        self.ui = SeeView(automate, list)
 
         self.ui.setupUi(self)

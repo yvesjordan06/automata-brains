@@ -16,6 +16,7 @@ class Ui_GroupBox(object):
     def __init__(self,automate:Automate,list:dict):
         self.list = list
         self.automate = automate
+        self.automate.automate_modifier.connect(self.set_state)
 
     def setupUi(self, GroupBox):
         GroupBox.setObjectName("GroupBox")
