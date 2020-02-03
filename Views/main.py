@@ -5,7 +5,7 @@
 # Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
-
+import sys
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Views.views import SeeAutomataView, CreateAutomataView
@@ -369,6 +369,8 @@ class Ui_MainWindow(object):
         self.actionCompleter.triggered.connect(lambda: self.automate.copie_automate(self.automate.completer()))
         self.actionMinimiser.triggered.connect(self.minimizer)
         self.actionOuvrir.triggered.connect(lambda: self.showDialog())
+        self.actionQuitter.triggered.connect(lambda: self.exitDialog())
+        self.quitToolButton.clicked.connect(lambda: self.exitDialog())
 
     def visualiser(self):
         self.automate.image.emit(self.automate.visualiser())
@@ -438,6 +440,9 @@ class Ui_MainWindow(object):
                 result = self.automate.reconnais_text(text)
                 print(f'Voici le resultat {result}')
                 self.automate.reconnaissance.emit(result)
+
+    def exitDialog(self):
+            sys.exit()
 
     def showUnionDialog(self):
         if not self.liste_automate or len(self.liste_automate) < 2:
