@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd279e7b-cde8-466e-b30e-cb8f842b5390" name="Default Changelist" comment="git ignore diagram">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Automate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Automate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Prefix.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Prefix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/RegExp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/RegExp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/central.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/central.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/imageViewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/imageViewer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/makeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/makeView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/reconnaissance.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/reconnaissance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Affichage/see.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Affichage/see.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Creation/automataSelect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Creation/automataSelect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Creation/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Creation/creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Creation/transitionAddUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Creation/transitionAddUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Views/views.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +14,7 @@
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Alphabet_test_EtatTestCase.coverage" NAME="Unittests for Alphabet_test.EtatTestCase Coverage Results" MODIFIED="1580300488256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Transition_test_AlphabetTestCase.coverage" NAME="Unittests for Transition_test.AlphabetTestCase Coverage Results" MODIFIED="1580300803918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
     <SUITE FILE_PATH="coverage/automata_brain$Unittests_for_Etat_test_EtatTestCase.coverage" NAME="Unittests for Etat_test.EtatTestCase Coverage Results" MODIFIED="1580300224144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Models/Tests" />
-    <SUITE FILE_PATH="coverage/automata_brains$scroll.coverage" NAME="scroll Coverage Results" MODIFIED="1580590831396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/automata_brains$scroll.coverage" NAME="scroll Coverage Results" MODIFIED="1580590831396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$" />
     <SUITE FILE_PATH="coverage/automata_brain$creation.coverage" NAME="creation Coverage Results" MODIFIED="1580332965011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views/Creation" />
     <SUITE FILE_PATH="coverage/automata_brains$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1580690091235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Views" />
     <SUITE FILE_PATH="coverage/automata_brain$main.coverage" NAME="main Coverage Results" MODIFIED="1580256504788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -66,109 +51,6 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/Automate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="465" column="40" selection-start-line="465" selection-start-column="40" selection-end-line="465" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Creation/transitionAddUI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1247971762/PyQt5/QtWidgets/QMainWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="238" column="8" selection-start-line="238" selection-start-column="8" selection-end-line="238" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/Creation/creation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/imageViewer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-              <folding>
-                <element signature="e#1#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/bigReconnaisance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/central.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Affichage/reconnaissance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
-              <folding>
-                <element signature="e#206#248#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -186,69 +68,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Models/Prefix.py" />
-        <option value="$PROJECT_DIR$/Models/RegExp.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/makeView.py" />
-        <option value="$PROJECT_DIR$/Views/views.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/automataSelect.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/imageViewer.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/central.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/see.py" />
-        <option value="$PROJECT_DIR$/Views/Affichage/reconnaissance.py" />
-        <option value="$PROJECT_DIR$/Models/Automate.py" />
-        <option value="$PROJECT_DIR$/Views/main.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/transitionAddUI.py" />
-        <option value="$PROJECT_DIR$/Views/Creation/creation.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="Affichage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automata-brains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automata-brains" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="Creation" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1XIK5CfOS7OuuMJAPGBUSl8is8d" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../scroll.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/scroll.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -263,18 +93,6 @@
       <recent name="$PROJECT_DIR$/UI" />
       <recent name="$PROJECT_DIR$/Views" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.main (1)">
     <configuration name="Automate" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -395,12 +213,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../scroll.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/scroll.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -410,12 +228,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.Automate" />
-      <item itemvalue="Python.scroll" />
-      <item itemvalue="Python.RegExp" />
       <item itemvalue="Python.Prefix" />
+      <item itemvalue="Python.RegExp" />
+      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.scroll" />
     </list>
     <recent_temporary>
       <list>
@@ -550,33 +368,6 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32911393" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39873418" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924242" weight="0.32911393" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007576" side_tool="true" weight="0.32911393" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32911393" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32954547" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -586,20 +377,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -635,22 +413,26 @@
       <screen x="68" y="27" width="1532" height="873" />
     </state>
     <state x="292" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/68.27.1532.873@68.27.1532.873" timestamp="1580576578076" />
-    <state width="1509" height="219" key="GridCell.Tab.0.bottom" timestamp="1580580182137">
+    <state width="1509" height="216" key="GridCell.Tab.0.bottom" timestamp="1580718348321">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="219" key="GridCell.Tab.0.bottom/68.27.1532.873@68.27.1532.873" timestamp="1580580182137" />
-    <state width="1509" height="219" key="GridCell.Tab.0.center" timestamp="1580580182136">
+    <state width="1509" height="216" key="GridCell.Tab.0.bottom/68.27.1532.873@68.27.1532.873" timestamp="1580718348321" />
+    <state width="1509" height="216" key="GridCell.Tab.0.center" timestamp="1580718348320">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="219" key="GridCell.Tab.0.center/68.27.1532.873@68.27.1532.873" timestamp="1580580182136" />
-    <state width="1509" height="219" key="GridCell.Tab.0.left" timestamp="1580580182135">
+    <state width="1509" height="216" key="GridCell.Tab.0.center/68.27.1532.873@68.27.1532.873" timestamp="1580718348320" />
+    <state width="1509" height="216" key="GridCell.Tab.0.left" timestamp="1580718348319">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="219" key="GridCell.Tab.0.left/68.27.1532.873@68.27.1532.873" timestamp="1580580182135" />
-    <state width="1509" height="219" key="GridCell.Tab.0.right" timestamp="1580580182136">
+    <state width="1509" height="216" key="GridCell.Tab.0.left/68.27.1532.873@68.27.1532.873" timestamp="1580718348318" />
+    <state width="1509" height="216" key="GridCell.Tab.0.right" timestamp="1580718348320">
       <screen x="68" y="27" width="1532" height="873" />
     </state>
-    <state width="1509" height="219" key="GridCell.Tab.0.right/68.27.1532.873@68.27.1532.873" timestamp="1580580182136" />
+    <state width="1509" height="216" key="GridCell.Tab.0.right/68.27.1532.873@68.27.1532.873" timestamp="1580718348320" />
+    <state x="490" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1580728015561">
+      <screen x="68" y="27" width="1532" height="873" />
+    </state>
+    <state x="490" y="291" key="com.intellij.ide.util.TipDialog/68.27.1532.873@68.27.1532.873" timestamp="1580728015561" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,175 +449,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../scroll.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/etatUI.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Etat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Prefix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/RegExp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="330" column="28" selection-start-line="330" selection-start-column="9" selection-end-line="330" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#3655#4024#0" />
-            <element signature="e#4082#5191#0" />
-            <element signature="e#5280#6374#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/makeView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/makeView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/automataSelect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/transitionView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/see.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/reconnaissance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
-          <folding>
-            <element signature="e#206#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/central.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1247971762/PyQt5/QtWidgets/QMainWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="238" column="8" selection-start-line="238" selection-start-column="8" selection-end-line="238" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/imageViewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="e#1#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Affichage/bigReconnaisance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Automate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/transitionAddUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="465" column="40" selection-start-line="465" selection-start-column="40" selection-end-line="465" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Creation/creation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
