@@ -62,6 +62,7 @@ class Ui_Form(object):
         self.remove.setText(_translate("Form", "Supprimer"))
 
     def action_set_state(self):
+        self.alphabetDisplayGroup.setTitle(f"Alphabet {len(self.automate.alphabet.list) if self.automate.alphabet.list else ''}")
         self.etatList.clear()
         self.etatList.addItems(self.automate.alphabet.list)
 

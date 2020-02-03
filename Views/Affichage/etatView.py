@@ -86,6 +86,7 @@ class Ui_Form(object):
 
     def action_set_state(self):
         self.etatList.clear()
+        self.alphabetDisplayGroup.setTitle(f"Etats {len(self.automate.etats) if self.automate.etats else ''}")
 
         for etat in self.automate.etats:
             label = str(etat)
