@@ -86,3 +86,4 @@ Declaration `definir_nom(nom:str)`
 >Cette methode permet simplement de mettre la nom a l'automate Elle ne retourne rien et rejete une erreur si le type du nom n'est pas un str
 
 Trello Link [https://trello.com/b/8eWuyGfD/tp304]
+Telegram Link [https://t.me/automata_brains]
